@@ -1,0 +1,42 @@
+name: ci
+# Free-tier minutes: two short jobs on pull requests only.
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+  pr-checks:
+    # Copied from decidrs/brain-workbench ci-checks e0ab597: credential scan over added lines, house rule 11 grep (count and exit code only).
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: PR diff
+        run: git diff --no-color "${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}" > "$RUNNER_TEMP/pr.diff"
+      - name: credential scan (added lines)
+        run: python3 .github/ci/scan_diff.py .github/ci "$RUNNER_TEMP/pr.diff"
+      - name: house rule 11 grep
+        env:
+          RULE11_PATTERN: ${{ secrets.RULE11_PATTERN }}
+        run: bash .github/ci/rule11.sh "$RUNNER_TEMP/pr.diff"
