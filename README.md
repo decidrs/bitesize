@@ -14,3 +14,14 @@ npm run build    # static site in dist/ (Vercel picks this up as a Vite project)
 ```
 
 CI (`.github/workflows/ci.yml`): tests and build, plus the PR checks copied from brain-workbench (credential scan of added lines, rule 11 grep via the `RULE11_PATTERN` secret).
+
+## iPhone app (Capacitor)
+
+`ios/` is a Capacitor wrapper around the same build; the cards ship inside the app, so it works offline. Native extras (haptics on swipe, native share sheet, opt-in 8am "card of the day" reminder scheduled on the phone) live in `src/native.ts` and are no-ops on the web.
+
+```
+npm run build && npx cap sync ios
+npx cap open ios   # on a Mac with Xcode: set the signing team, then Product → Archive → Distribute
+```
+
+Privacy policy for the App Store listing: `/privacy.html` on the site.
