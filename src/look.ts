@@ -1,9 +1,9 @@
-// Design directions under review. ?look=ink|paper|pop picks one and it sticks on this device.
-export const LOOKS = ['ink', 'paper', 'pop'] as const
+// Design directions under review. ?look=ink|paper|pop|soft|dusk|linen picks one and it sticks on this device.
+export const LOOKS = ['ink', 'paper', 'pop', 'soft', 'dusk', 'linen'] as const
 export type Look = (typeof LOOKS)[number]
 
 const KEY = 'bitesize.look'
-const THEME: Record<Look, string> = { ink: '#0d0f14', paper: '#f5efe3', pop: '#121212' }
+const THEME: Record<Look, string> = { ink: '#0d0f14', paper: '#f5efe3', pop: '#121212', soft: '#111318', dusk: '#0f1115', linen: '#f3f0ea' }
 
 export function applyLook(): Look {
   let look: Look = 'ink'

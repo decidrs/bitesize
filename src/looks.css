@@ -54,3 +54,58 @@
 [data-look='pop'] .card .inner > * { align-self: stretch; }
 [data-look='pop'] .card .inner > .hook, [data-look='pop'] .card .inner > .cta, [data-look='pop'] .card .inner > .tag { align-self: flex-start; }
 [data-look='pop'] .hint { display: none; }
+
+/* ═════════ In-between directions (after founder feedback: Pop too loud) ═════════ */
+
+/* Shared: a rounded card that fills the screen, actions inside it along the bottom. */
+:is([data-look='soft'], [data-look='linen']) .feed { padding: 0 .6rem; }
+:is([data-look='soft'], [data-look='linen']) .card { padding: .5rem 0; }
+:is([data-look='soft'], [data-look='linen']) .card .inner { border-left: 0; min-height: 100%; display: flex; flex-direction: column;
+  justify-content: center; border-radius: 26px; padding: 1.6rem 1.4rem 1.8rem; }
+:is([data-look='soft'], [data-look='linen']) .card .inner > * { align-self: stretch; }
+:is([data-look='soft'], [data-look='linen']) .card .inner > :is(.tag, .cta) { align-self: flex-start; }
+:is([data-look='soft'], [data-look='linen']) .card:not(.quiz):not(.done):not(.empty) .inner { padding-bottom: 5.2rem; }
+:is([data-look='soft'], [data-look='linen']) .actions { flex-direction: row; right: auto; left: 1.4rem; bottom: 1.9rem; }
+:is([data-look='soft'], [data-look='linen']) .hint { display: none; }
+
+/* ───────────── D: Soft ─────────────
+   Ink's calm dark room, but each card is a softly tinted panel of its topic colour. Serif headline, colour kept quiet. */
+[data-look='soft'] { --bg: #111318; --chip: #1e2129; }
+[data-look='soft'] .card .inner { background: color-mix(in srgb, var(--accent) 13%, #16181e);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent); }
+[data-look='soft'] .card.done .inner { --accent: var(--history); }
+[data-look='soft'] .actions button, [data-look='soft'] .actions a { background: color-mix(in srgb, var(--accent) 20%, #1b1d24); }
+[data-look='soft'] .opt { background: rgb(255 255 255 / .05); border-color: rgb(255 255 255 / .09); }
+
+/* ───────────── E: Dusk ─────────────
+   No panels at all: the whole screen takes a deep wash of the topic colour, so swiping moves you through colour. */
+[data-look='dusk'] { --bg: #0f1115; }
+[data-look='dusk'] .card { background:
+  radial-gradient(120% 70% at 20% 30%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 70%),
+  color-mix(in srgb, var(--accent) 8%, var(--bg)); }
+[data-look='dusk'] .card .inner { border-left: 0; padding-left: 0; }
+[data-look='dusk'] .card { padding-left: 1.6rem; }
+[data-look='dusk'] .card h2 { font-size: clamp(1.6rem, 7.5vw, 2.15rem); line-height: 1.08; }
+[data-look='dusk'] .card .hook { color: color-mix(in srgb, var(--accent) 80%, white); }
+[data-look='dusk'] .actions button, [data-look='dusk'] .actions a { background: rgb(255 255 255 / .08);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+[data-look='dusk'] .chips { background: color-mix(in srgb, var(--bg) 60%, transparent); }
+
+/* ───────────── F: Linen ─────────────
+   Paper's light warmth with pastel topic panels; softer and friendlier than Paper, quieter than Pop. */
+[data-look='linen'] {
+  --bg: #f3f0ea; --fg: #1f1d1a; --muted: #77716a; --chip: #e6e1d8; --line: #d8d1c4;
+  --history: #c9782e; --science: #3b82b0; --business: #3f8a4f; --nature: #6a8f2a; --space: #6c5bb5; --language: #c04d7c;
+  color-scheme: light;
+}
+[data-look='linen'] .chips button.today.on { background: var(--fg); color: var(--bg); }
+[data-look='linen'] .card .inner { background: color-mix(in srgb, var(--accent) 14%, #fbf9f5);
+  box-shadow: 0 1px 0 rgb(0 0 0 / .04), 0 10px 30px rgb(60 40 20 / .08); }
+[data-look='linen'] .card.done .inner { --accent: var(--history); }
+[data-look='linen'] .card h2 { font-weight: 700; }
+[data-look='linen'] .card .hook { color: color-mix(in srgb, var(--accent) 85%, black); }
+[data-look='linen'] .actions button, [data-look='linen'] .actions a { background: rgb(255 255 255 / .7); }
+[data-look='linen'] .actions button.saved { color: var(--history); }
+[data-look='linen'] .opt { background: rgb(255 255 255 / .6); border-color: rgb(0 0 0 / .06); }
+[data-look='linen'] .opt.right { background: #e3efdc; } [data-look='linen'] .opt.wrong { background: #f6dfd9; }
+[data-look='linen'] .cta { background: var(--fg); color: var(--bg); }
