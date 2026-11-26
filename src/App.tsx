@@ -6,7 +6,7 @@ import { makeQuiz, type Quiz } from './quiz'
 import { cardImage, SITE } from './shareImage'
 import { loadSaved, loadSeen, loadStreak, saveSaved, saveSeen, saveStreak } from './storage'
 import { TOPICS, type Card, type Topic } from './types'
-import { dailyReminderOn, isNative, nativeShare, nativeShareImage, setDailyReminder, tick } from './native'
+import { appReady, dailyReminderOn, haptic, isNative, nativeShare, nativeShareImage, setDailyReminder } from './native'
 
 const CARDS = deck as Card[]
 const BY_ID = new Map(CARDS.map((c) => [c.id, c]))
@@ -26,6 +26,7 @@ type View = { kind: 'today' } | { kind: 'feed'; topic: Topic | null } | { kind: 
 type Item = { kind: 'card'; card: Card } | { kind: 'quiz'; quiz: Quiz } | { kind: 'done' }
 
 const today = () => dayKey(new Date())
+const reduceMotion = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false
 
 /** Interleave a recall quiz after every QUIZ_EVERY cards, using cards already seen. */
 function withQuizzes(cards: Card[], seen: Set<string>, startIdx: number): Item[] {
@@ -53,7 +54,27 @@ export default function App() {
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [reminder, setReminder] = useState(false)
   const feedRef = useRef<HTMLDivElement>(null)
+  const chipsRef = useRef<HTMLElement>(null)
   const cardCount = useRef(0)
+  const lastIdx = useRef(-1)
+  const [active, setActive] = useState(0)
+  const [shown, setShown] = useState<Set<number>>(() => new Set())
+  const [firstRun] = useState(() => seen.size < 3)
+
+  useEffect(() => {
+    requestAnimationFrame(() => appReady())
+  }, [])
+
+  // Keep the selected tab in view, as a native segmented bar does.
+  useEffect(() => {
+    const on = chipsRef.current?.querySelector('button.on') as HTMLElement | null
+    on?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' })
+  }, [view])
+
+  const go = (v: View) => {
+    haptic.select()
+    setView(v)
+  }
 
   // Each day's reminder carries the first card of that day's Today's 5, so the lock screen previews it (it can differ if cards are seen meanwhile).
   const cardFor = useCallback((d: Date) => pickToday(CARDS, seen, dayKey(d))[0], [seen])
@@ -75,6 +96,9 @@ export default function App() {
 
   useEffect(() => {
     setAnswers({})
+    lastIdx.current = -1
+    setActive(0)
+    setShown(new Set())
     if (view.kind === 'today') {
       const five = pickToday(CARDS, seen, today())
       setItems([...five.map((card): Item => ({ kind: 'card', card })), { kind: 'done' }])
@@ -106,7 +130,14 @@ export default function App() {
           if (!e.isIntersecting) continue
           const el = e.target as HTMLElement
           const idx = Number(el.dataset.idx)
-          tick()
+          // One light tap each time a new card settles; none for the first card on screen.
+          if (lastIdx.current !== -1 && idx !== lastIdx.current) {
+            if (el.dataset.kind === 'done') haptic.success()
+            else haptic.card()
+          }
+          lastIdx.current = idx
+          setActive(idx)
+          setShown((s) => (s.has(idx) ? s : new Set(s).add(idx)))
           if (el.dataset.kind === 'done') finishDay()
           const id = el.dataset.id
           if (id && !seen.has(id)) {
@@ -139,7 +170,10 @@ export default function App() {
   const toggleSave = (id: string) => {
     const next = new Set(saved)
     if (next.has(id)) next.delete(id)
-    else next.add(id)
+    else {
+      next.add(id)
+      haptic.save()
+    }
     setSaved(next)
     saveSaved(next)
   }
@@ -170,31 +204,45 @@ export default function App() {
   }
 
   const streakNow = currentStreak(streak, today())
+  // The flame chip gives a little bump whenever the streak grows.
+  const prevStreak = useRef(streakNow)
+  const [bump, setBump] = useState(false)
+  useEffect(() => {
+    if (streakNow > prevStreak.current) {
+      setBump(true)
+      const t = window.setTimeout(() => setBump(false), 700)
+      prevStreak.current = streakNow
+      return () => window.clearTimeout(t)
+    }
+    prevStreak.current = streakNow
+  }, [streakNow])
+  const fx = (i: number) => (shown.has(i) ? 'in' : '')
   const doneToday = streak.last === today()
   const isOn = (v: View) => JSON.stringify(v) === JSON.stringify(view)
 
   return (
     <div className="app">
-      <nav className="chips" aria-label="Topics">
-        <button className={`today ${isOn({ kind: 'today' }) ? 'on' : ''}`} onClick={() => setView({ kind: 'today' })}>
+      <nav className="chips" aria-label="Topics" ref={chipsRef}>
+        <button className={`today ${isOn({ kind: 'today' }) ? 'on' : ''}`} onClick={() => go({ kind: 'today' })}>
           {doneToday ? '✓ Today' : "Today's 5"}
-          {streakNow > 0 && <span className="flame"> 🔥{streakNow}</span>}
+          {streakNow > 0 && <span className={`flame ${bump ? 'bump' : ''}`}> 🔥{streakNow}</span>}
         </button>
-        <button className={isOn({ kind: 'feed', topic: null }) ? 'on' : ''} onClick={() => setView({ kind: 'feed', topic: null })}>
+        <button className={isOn({ kind: 'feed', topic: null }) ? 'on' : ''} onClick={() => go({ kind: 'feed', topic: null })}>
           All
         </button>
         {TOPICS.map((t) => (
-          <button key={t} className={isOn({ kind: 'feed', topic: t }) ? 'on' : ''} onClick={() => setView({ kind: 'feed', topic: t })}>
+          <button key={t} className={isOn({ kind: 'feed', topic: t }) ? 'on' : ''} onClick={() => go({ kind: 'feed', topic: t })}>
             {LABEL[t]}
           </button>
         ))}
-        <button className={view.kind === 'saved' ? 'on' : ''} onClick={() => setView({ kind: 'saved' })}>
+        <button className={view.kind === 'saved' ? 'on' : ''} onClick={() => go({ kind: 'saved' })}>
           ★ Saved
         </button>
         {isNative && (
           <button
             className={reminder ? 'on' : ''}
             onClick={async () => {
+              haptic.select()
               const on = await setDailyReminder(!reminder, cardFor)
               setReminder(on)
               flash(on ? 'Daily reminder at 8am' : 'Reminder off')
@@ -205,7 +253,14 @@ export default function App() {
         )}
       </nav>
 
-      <main className="feed" ref={feedRef}>
+      {view.kind === 'today' && (
+        <div className="progress" aria-label={`Card ${Math.min(active + 1, 5)} of 5`}>
+          {[0, 1, 2, 3, 4].map((n) => (
+            <span key={n} className={n <= active ? 'on' : ''} />
+          ))}
+        </div>
+      )}
+      <main className="feed" ref={feedRef} key={JSON.stringify(view)}>
         {items.length === 0 && (
           <section className="card empty">
             <div className="inner">
@@ -217,13 +272,16 @@ export default function App() {
         {items.map((it, i) => {
           if (it.kind === 'done')
             return (
-              <section key="done" className="card done" data-idx={i} data-kind="done">
+              <section key="done" className={`card done ${fx(i)}`} data-idx={i} data-kind="done">
                 <div className="inner">
                   <span className="tag">Done for today</span>
-                  <h2>{streakNow > 1 ? `🔥 ${streakNow} days in a row` : 'That’s your five'}</h2>
+                  <div className="burst" aria-hidden="true">
+                    🔥
+                  </div>
+                  <h2>{streakNow > 1 ? `${streakNow} days in a row` : 'That’s your five'}</h2>
                   <p className="body">Five new things you didn’t know this morning. Five more tomorrow.</p>
                   <p className="hook">Miss a day? One free pass a week keeps your streak alive.</p>
-                  <button className="cta" onClick={() => setView({ kind: 'feed', topic: null })}>
+                  <button className="cta" onClick={() => go({ kind: 'feed', topic: null })}>
                     Keep exploring
                   </button>
                 </div>
@@ -233,7 +291,7 @@ export default function App() {
             const { quiz } = it
             const picked = answers[i]
             return (
-              <section key={`q-${i}`} className={`card quiz t-${quiz.card.topic}`} data-idx={i} data-kind="quiz">
+              <section key={`q-${i}`} className={`card quiz t-${quiz.card.topic} ${fx(i)}`} data-idx={i} data-kind="quiz">
                 <div className="inner">
                   <span className="tag">Quick recall</span>
                   <h2>{quiz.card.title}</h2>
@@ -247,7 +305,8 @@ export default function App() {
                         disabled={!!picked}
                         onClick={() => {
                           setAnswers((a) => ({ ...a, [i]: o.id }))
-                          if (o.id === quiz.card.id) tick()
+                          if (o.id === quiz.card.id) haptic.success()
+                          else haptic.miss()
                         }}
                       >
                         {o.body.split(/(?<=[.!?])\s/)[0]}
@@ -261,7 +320,7 @@ export default function App() {
           }
           const c = it.card
           return (
-            <section key={`${c.id}-${i}`} className={`card t-${c.topic}`} data-id={c.id} data-idx={i} data-kind="card">
+            <section key={`${c.id}-${i}`} className={`card t-${c.topic} ${fx(i)}`} data-id={c.id} data-idx={i} data-kind="card">
               <div className="inner">
                 <span className="tag">
                   {LABEL[c.topic]}
@@ -272,7 +331,12 @@ export default function App() {
                 <p className="hook">{c.hook}</p>
               </div>
               <div className="actions">
-                <button aria-label={saved.has(c.id) ? 'Unsave' : 'Save'} onClick={() => toggleSave(c.id)}>
+                <button
+                  className={saved.has(c.id) ? 'saved' : ''}
+                  aria-label={saved.has(c.id) ? 'Remove from saved' : 'Save'}
+                  aria-pressed={saved.has(c.id)}
+                  onClick={() => toggleSave(c.id)}
+                >
                   {saved.has(c.id) ? '★' : '☆'}
                 </button>
                 <button aria-label="Share" onClick={() => share(c)}>
@@ -289,13 +353,15 @@ export default function App() {
                   </a>
                 )}
               </div>
-              {i === 0 && <p className="hint">Swipe up ↑</p>}
+              {i === 0 && firstRun && <p className="hint">Swipe up for the next one</p>}
             </section>
           )
         })}
       </main>
       <footer className="note">Cards are AI-assisted and may contain mistakes.</footer>
-      {toast && <div className="toast">{toast}</div>}
+      <div className={`toast ${toast ? 'show' : ''}`} role="status" aria-live="polite">
+        {toast}
+      </div>
     </div>
   )
 }
