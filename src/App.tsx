@@ -10,7 +10,7 @@ import { appReady, dailyReminderOn, haptic, isNative, nativeShare, nativeShareIm
 
 const CARDS = deck as Card[]
 const BY_ID = new Map(CARDS.map((c) => [c.id, c]))
-const FEEDBACK = import.meta.env.VITE_FEEDBACK_EMAIL as string | undefined
+const FEEDBACK = (import.meta.env.VITE_FEEDBACK_EMAIL as string | undefined) || 'hello@strateriq.com'
 const QUIZ_EVERY = 5
 
 const LABEL: Record<Topic, string> = {
@@ -358,7 +358,15 @@ export default function App() {
           )
         })}
       </main>
-      <footer className="note">Cards are AI-assisted and may contain mistakes.</footer>
+      <footer className="note">
+        Cards are AI-assisted and may contain mistakes. <a href={`${SITE}/support.html`} target="_blank" rel="noopener">
+          Support
+        </a>{' '}
+        ·{' '}
+        <a href={`${SITE}/privacy.html`} target="_blank" rel="noopener">
+          Privacy
+        </a>
+      </footer>
       <div className={`toast ${toast ? 'show' : ''}`} role="status" aria-live="polite">
         {toast}
       </div>

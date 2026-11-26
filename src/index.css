@@ -161,3 +161,4 @@ button { -webkit-appearance: none; appearance: none; }
 .chips .flame { display: inline-block; }
 .chips .flame.bump { animation: bump .6s var(--spring); }
 @keyframes bump { 40% { transform: scale(1.4); } }
+.note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; padding: .4rem .1rem; }

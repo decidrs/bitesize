@@ -4,7 +4,7 @@ One screen, one thing worth knowing. A mobile-first web app: swipe up through sh
 
 - No accounts, no cookies, no server data. Seen cards and saved cards live in the browser's local storage only.
 - Content is a fixed deck in `content/*.tsv` (title, body, hook; tab-separated). `npm run content` rebuilds `src/data/cards.json`. Card ids come from line order, so **append new cards at the end of a file**; inserting or deleting rows shifts ids and scrambles people's saved cards.
-- Optional `VITE_FEEDBACK_EMAIL` adds a "report a mistake" mail link on each card; unset, the link is hidden.
+- Each card has a "report a mistake" mail link to hello@strateriq.com (override with `VITE_FEEDBACK_EMAIL`). Support page: `/support.html`; privacy: `/privacy.html`.
 
 ```
 npm ci
