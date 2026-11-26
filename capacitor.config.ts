@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'co.dewolf.morsel',
+  appId: 'com.strateriq.morsel',
   appName: 'Morsel',
   webDir: 'dist'
 };
