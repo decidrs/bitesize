@@ -3,6 +3,7 @@ import deck from './data/cards.json'
 import { buildOrder, nextCycle } from './feed'
 import { loadSaved, loadSeen, saveSaved, saveSeen } from './storage'
 import { TOPICS, type Card, type Topic } from './types'
+import { dailyReminderOn, isNative, nativeShare, setDailyReminder, tick } from './native'
 
 const CARDS = deck as Card[]
 const FEEDBACK = import.meta.env.VITE_FEEDBACK_EMAIL as string | undefined
@@ -25,6 +26,11 @@ export default function App() {
   const [toast, setToast] = useState('')
   const [feed, setFeed] = useState<Card[]>([])
   const feedRef = useRef<HTMLDivElement>(null)
+  const [reminder, setReminder] = useState(false)
+
+  useEffect(() => {
+    dailyReminderOn().then(setReminder)
+  }, [])
 
   const pool = useMemo(() => {
     if (view.kind === 'saved') return CARDS.filter((c) => saved.has(c.id))
@@ -49,6 +55,7 @@ export default function App() {
           const el = e.target as HTMLElement
           const id = el.dataset.id!
           const idx = Number(el.dataset.idx)
+          tick()
           if (!seen.has(id)) {
             seen.add(id)
             saveSeen(seen)
@@ -81,6 +88,7 @@ export default function App() {
     const text = `${c.title}\n\n${c.body}`
     const url = location.origin
     try {
+      if (await nativeShare(c.title, `${text}\n\n${url}`)) return
       if (navigator.share) await navigator.share({ title: c.title, text, url })
       else {
         await navigator.clipboard.writeText(`${text}\n\n${url}`)
@@ -107,6 +115,18 @@ export default function App() {
         <button className={view.kind === 'saved' ? 'on' : ''} onClick={() => setView({ kind: 'saved' })}>
           ★ Saved
         </button>
+        {isNative && (
+          <button
+            className={reminder ? 'on' : ''}
+            onClick={async () => {
+              const on = await setDailyReminder(!reminder)
+              setReminder(on)
+              flash(on ? 'Daily reminder at 8am' : 'Reminder off')
+            }}
+          >
+            ⏰ Daily
+          </button>
+        )}
       </nav>
 
       <main className="feed" ref={feedRef}>
