@@ -1,12 +1,17 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import deck from './data/cards.json'
 import { buildOrder, nextCycle } from './feed'
-import { loadSaved, loadSeen, saveSaved, saveSeen } from './storage'
+import { completeDay, currentStreak, dayKey, pickToday, type Streak } from './daily'
+import { makeQuiz, type Quiz } from './quiz'
+import { cardImage, SITE } from './shareImage'
+import { loadSaved, loadSeen, loadStreak, saveSaved, saveSeen, saveStreak } from './storage'
 import { TOPICS, type Card, type Topic } from './types'
-import { dailyReminderOn, isNative, nativeShare, setDailyReminder, tick } from './native'
+import { dailyReminderOn, isNative, nativeShare, nativeShareImage, setDailyReminder, tick } from './native'
 
 const CARDS = deck as Card[]
+const BY_ID = new Map(CARDS.map((c) => [c.id, c]))
 const FEEDBACK = import.meta.env.VITE_FEEDBACK_EMAIL as string | undefined
+const QUIZ_EVERY = 5
 
 const LABEL: Record<Topic, string> = {
   history: 'History',
@@ -17,16 +22,38 @@ const LABEL: Record<Topic, string> = {
   language: 'Words',
 }
 
-type View = { kind: 'feed'; topic: Topic | null } | { kind: 'saved' }
+type View = { kind: 'today' } | { kind: 'feed'; topic: Topic | null } | { kind: 'saved' }
+type Item = { kind: 'card'; card: Card } | { kind: 'quiz'; quiz: Quiz } | { kind: 'done' }
+
+const today = () => dayKey(new Date())
+
+/** Interleave a recall quiz after every QUIZ_EVERY cards, using cards already seen. */
+function withQuizzes(cards: Card[], seen: Set<string>, startIdx: number): Item[] {
+  const out: Item[] = []
+  cards.forEach((card, i) => {
+    out.push({ kind: 'card', card })
+    if ((startIdx + i + 1) % QUIZ_EVERY === 0) {
+      const pool = [...seen].map((id) => BY_ID.get(id)).filter((c): c is Card => !!c)
+      if (pool.length >= 3) {
+        const quiz = makeQuiz(pool, CARDS)
+        if (quiz) out.push({ kind: 'quiz', quiz })
+      }
+    }
+  })
+  return out
+}
 
 export default function App() {
-  const [view, setView] = useState<View>({ kind: 'feed', topic: null })
   const [seen] = useState(loadSeen)
   const [saved, setSaved] = useState(loadSaved)
+  const [streak, setStreak] = useState<Streak>(loadStreak)
+  const [view, setView] = useState<View>(() => (loadStreak().last === today() ? { kind: 'feed', topic: null } : { kind: 'today' }))
   const [toast, setToast] = useState('')
-  const [feed, setFeed] = useState<Card[]>([])
-  const feedRef = useRef<HTMLDivElement>(null)
+  const [items, setItems] = useState<Item[]>([])
+  const [answers, setAnswers] = useState<Record<number, string>>({})
   const [reminder, setReminder] = useState(false)
+  const feedRef = useRef<HTMLDivElement>(null)
+  const cardCount = useRef(0)
 
   useEffect(() => {
     dailyReminderOn().then(setReminder)
@@ -34,17 +61,36 @@ export default function App() {
 
   const pool = useMemo(() => {
     if (view.kind === 'saved') return CARDS.filter((c) => saved.has(c.id))
-    return view.topic ? CARDS.filter((c) => c.topic === view.topic) : CARDS
+    if (view.kind === 'feed' && view.topic) return CARDS.filter((c) => c.topic === view.topic)
+    return CARDS
     // saved list is snapshotted when the view opens, so un-saving doesn't yank cards away
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [view])
 
   useEffect(() => {
-    setFeed(view.kind === 'saved' ? pool : buildOrder(CARDS, seen, view.topic))
+    setAnswers({})
+    if (view.kind === 'today') {
+      const five = pickToday(CARDS, seen, today())
+      setItems([...five.map((card): Item => ({ kind: 'card', card })), { kind: 'done' }])
+    } else if (view.kind === 'saved') {
+      setItems(pool.map((card): Item => ({ kind: 'card', card })))
+    } else {
+      const order = buildOrder(CARDS, seen, view.topic)
+      cardCount.current = order.length
+      setItems(withQuizzes(order, seen, 0))
+    }
     feedRef.current?.scrollTo({ top: 0 })
   }, [view, pool, seen])
 
-  // Mark cards seen as they come into view; extend the feed near the end.
+  const finishDay = useCallback(() => {
+    setStreak((s) => {
+      const next = completeDay(s, today())
+      saveStreak(next)
+      return next
+    })
+  }, [])
+
+  // Mark cards seen as they come into view, extend the endless feed, record the day's finish.
   useEffect(() => {
     const root = feedRef.current
     if (!root) return
@@ -53,23 +99,31 @@ export default function App() {
         for (const e of entries) {
           if (!e.isIntersecting) continue
           const el = e.target as HTMLElement
-          const id = el.dataset.id!
           const idx = Number(el.dataset.idx)
           tick()
-          if (!seen.has(id)) {
+          if (el.dataset.kind === 'done') finishDay()
+          const id = el.dataset.id
+          if (id && !seen.has(id)) {
             seen.add(id)
             saveSeen(seen)
           }
           if (view.kind === 'feed') {
-            setFeed((f) => (idx >= f.length - 3 ? [...f, ...nextCycle(pool, f[f.length - 1]?.id)] : f))
+            setItems((f) => {
+              if (idx < f.length - 3) return f
+              const last = [...f].reverse().find((x) => x.kind === 'card')
+              const more = nextCycle(pool, last?.kind === 'card' ? last.card.id : undefined)
+              const start = cardCount.current
+              cardCount.current += more.length
+              return [...f, ...withQuizzes(more, seen, start)]
+            })
           }
         }
       },
       { root, threshold: 0.6 },
     )
-    root.querySelectorAll('[data-id]').forEach((el) => io.observe(el))
+    root.querySelectorAll('[data-idx]').forEach((el) => io.observe(el))
     return () => io.disconnect()
-  }, [feed, pool, seen, view.kind])
+  }, [items, pool, seen, view.kind, finishDay])
 
   const flash = (msg: string) => {
     setToast(msg)
@@ -85,30 +139,46 @@ export default function App() {
   }
 
   const share = async (c: Card) => {
-    const text = `${c.title}\n\n${c.body}`
-    const url = location.origin
+    const text = `${c.title}: ${SITE}`
     try {
-      if (await nativeShare(c.title, `${text}\n\n${url}`)) return
-      if (navigator.share) await navigator.share({ title: c.title, text, url })
-      else {
-        await navigator.clipboard.writeText(`${text}\n\n${url}`)
-        flash('Copied')
+      const blob = await cardImage(c, LABEL[c.topic])
+      if (await nativeShareImage(blob, `morsel-${c.id}.png`, text)) return
+      const file = new File([blob], `morsel-${c.id}.png`, { type: 'image/png' })
+      if (navigator.canShare?.({ files: [file] })) {
+        await navigator.share({ files: [file], text })
+        return
       }
+      if (await nativeShare(c.title, text)) return
+      if (navigator.share) {
+        await navigator.share({ title: c.title, text: `${c.title}\n\n${c.body}`, url: SITE })
+        return
+      }
+      const a = document.createElement('a')
+      a.href = URL.createObjectURL(blob)
+      a.download = file.name
+      a.click()
+      flash('Image saved')
     } catch {
       /* user cancelled */
     }
   }
 
-  const activeTopic = view.kind === 'feed' ? view.topic : null
+  const streakNow = currentStreak(streak, today())
+  const doneToday = streak.last === today()
+  const isOn = (v: View) => JSON.stringify(v) === JSON.stringify(view)
 
   return (
     <div className="app">
       <nav className="chips" aria-label="Topics">
-        <button className={view.kind === 'feed' && !activeTopic ? 'on' : ''} onClick={() => setView({ kind: 'feed', topic: null })}>
+        <button className={`today ${isOn({ kind: 'today' }) ? 'on' : ''}`} onClick={() => setView({ kind: 'today' })}>
+          {doneToday ? '✓ Today' : "Today's 5"}
+          {streakNow > 0 && <span className="flame"> 🔥{streakNow}</span>}
+        </button>
+        <button className={isOn({ kind: 'feed', topic: null }) ? 'on' : ''} onClick={() => setView({ kind: 'feed', topic: null })}>
           All
         </button>
         {TOPICS.map((t) => (
-          <button key={t} className={activeTopic === t ? 'on' : ''} onClick={() => setView({ kind: 'feed', topic: t })}>
+          <button key={t} className={isOn({ kind: 'feed', topic: t }) ? 'on' : ''} onClick={() => setView({ kind: 'feed', topic: t })}>
             {LABEL[t]}
           </button>
         ))}
@@ -130,7 +200,7 @@ export default function App() {
       </nav>
 
       <main className="feed" ref={feedRef}>
-        {feed.length === 0 && (
+        {items.length === 0 && (
           <section className="card empty">
             <div className="inner">
               <h2>Nothing saved yet</h2>
@@ -138,35 +208,85 @@ export default function App() {
             </div>
           </section>
         )}
-        {feed.map((c, i) => (
-          <section key={`${c.id}-${i}`} className={`card t-${c.topic}`} data-id={c.id} data-idx={i}>
-            <div className="inner">
-              <span className="tag">{LABEL[c.topic]}</span>
-              <h2>{c.title}</h2>
-              <p className="body">{c.body}</p>
-              <p className="hook">{c.hook}</p>
-            </div>
-            <div className="actions">
-              <button aria-label={saved.has(c.id) ? 'Unsave' : 'Save'} onClick={() => toggleSave(c.id)}>
-                {saved.has(c.id) ? '★' : '☆'}
-              </button>
-              <button aria-label="Share" onClick={() => share(c)}>
-                ↗
-              </button>
-              {FEEDBACK && (
-                <a
-                  aria-label="Report a mistake"
-                  href={`mailto:${FEEDBACK}?subject=${encodeURIComponent(`Bitesize card ${c.id}`)}&body=${encodeURIComponent(
-                    `Card: ${c.title}\nWhat's wrong:\n`,
-                  )}`}
-                >
-                  ⚑
-                </a>
-              )}
-            </div>
-            {i === 0 && <p className="hint">Swipe up ↑</p>}
-          </section>
-        ))}
+        {items.map((it, i) => {
+          if (it.kind === 'done')
+            return (
+              <section key="done" className="card done" data-idx={i} data-kind="done">
+                <div className="inner">
+                  <span className="tag">Done for today</span>
+                  <h2>{streakNow > 1 ? `🔥 ${streakNow} days in a row` : 'That’s your five'}</h2>
+                  <p className="body">Five new things you didn’t know this morning. Five more tomorrow.</p>
+                  <p className="hook">Miss a day? One free pass a week keeps your streak alive.</p>
+                  <button className="cta" onClick={() => setView({ kind: 'feed', topic: null })}>
+                    Keep exploring
+                  </button>
+                </div>
+              </section>
+            )
+          if (it.kind === 'quiz') {
+            const { quiz } = it
+            const picked = answers[i]
+            return (
+              <section key={`q-${i}`} className={`card quiz t-${quiz.card.topic}`} data-idx={i} data-kind="quiz">
+                <div className="inner">
+                  <span className="tag">Quick recall</span>
+                  <h2>{quiz.card.title}</h2>
+                  <p className="ask">Which one is it?</p>
+                  {quiz.options.map((o) => {
+                    const state = picked ? (o.id === quiz.card.id ? 'right' : o.id === picked ? 'wrong' : 'dim') : ''
+                    return (
+                      <button
+                        key={o.id}
+                        className={`opt ${state}`}
+                        disabled={!!picked}
+                        onClick={() => {
+                          setAnswers((a) => ({ ...a, [i]: o.id }))
+                          if (o.id === quiz.card.id) tick()
+                        }}
+                      >
+                        {o.body.split(/(?<=[.!?])\s/)[0]}
+                      </button>
+                    )
+                  })}
+                  {picked && <p className="hook">{picked === quiz.card.id ? 'Nailed it.' : 'Now you’ll remember it.'}</p>}
+                </div>
+              </section>
+            )
+          }
+          const c = it.card
+          return (
+            <section key={`${c.id}-${i}`} className={`card t-${c.topic}`} data-id={c.id} data-idx={i} data-kind="card">
+              <div className="inner">
+                <span className="tag">
+                  {LABEL[c.topic]}
+                  {view.kind === 'today' && <span className="count"> · {i + 1} of 5</span>}
+                </span>
+                <h2>{c.title}</h2>
+                <p className="body">{c.body}</p>
+                <p className="hook">{c.hook}</p>
+              </div>
+              <div className="actions">
+                <button aria-label={saved.has(c.id) ? 'Unsave' : 'Save'} onClick={() => toggleSave(c.id)}>
+                  {saved.has(c.id) ? '★' : '☆'}
+                </button>
+                <button aria-label="Share" onClick={() => share(c)}>
+                  ↗
+                </button>
+                {FEEDBACK && (
+                  <a
+                    aria-label="Report a mistake"
+                    href={`mailto:${FEEDBACK}?subject=${encodeURIComponent(`Morsel card ${c.id}`)}&body=${encodeURIComponent(
+                      `Card: ${c.title}\nWhat's wrong:\n`,
+                    )}`}
+                  >
+                    ⚑
+                  </a>
+                )}
+              </div>
+              {i === 0 && <p className="hint">Swipe up ↑</p>}
+            </section>
+          )
+        })}
       </main>
       <footer className="note">Cards are AI-assisted and may contain mistakes.</footer>
       {toast && <div className="toast">{toast}</div>}

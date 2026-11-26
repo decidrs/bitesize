@@ -3,6 +3,7 @@ import { Capacitor } from '@capacitor/core'
 import { Haptics, ImpactStyle } from '@capacitor/haptics'
 import { LocalNotifications } from '@capacitor/local-notifications'
 import { Share } from '@capacitor/share'
+import { Directory, Filesystem } from '@capacitor/filesystem'
 
 export const isNative = Capacitor.isNativePlatform()
 
@@ -44,5 +45,18 @@ export async function setDailyReminder(on: boolean): Promise<boolean> {
       },
     ],
   })
+  return true
+}
+
+/** Share a PNG via the native sheet. Returns false on the web. */
+export async function nativeShareImage(blob: Blob, name: string, text: string): Promise<boolean> {
+  if (!isNative) return false
+  const data = await new Promise<string>((resolve) => {
+    const r = new FileReader()
+    r.onload = () => resolve(String(r.result).split(',')[1])
+    r.readAsDataURL(blob)
+  })
+  const { uri } = await Filesystem.writeFile({ path: name, data, directory: Directory.Cache })
+  await Share.share({ text, files: [uri] }).catch(() => {})
   return true
 }

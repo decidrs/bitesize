@@ -19,3 +19,20 @@ export const loadSeen = () => new Set(read('bitesize.seen'))
 export const saveSeen = (s: Set<string>) => write('bitesize.seen', s)
 export const loadSaved = () => new Set(read('bitesize.saved'))
 export const saveSaved = (s: Set<string>) => write('bitesize.saved', s)
+
+import { NO_STREAK, type Streak } from './daily'
+export function loadStreak(): Streak {
+  try {
+    const v = JSON.parse(localStorage.getItem('bitesize.streak') || 'null')
+    return v && typeof v.count === 'number' ? v : NO_STREAK
+  } catch {
+    return NO_STREAK
+  }
+}
+export function saveStreak(s: Streak) {
+  try {
+    localStorage.setItem('bitesize.streak', JSON.stringify(s))
+  } catch {
+    /* ignore */
+  }
+}
