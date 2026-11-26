@@ -175,6 +175,433 @@
   "hook": "Eating out is as old as city living."
  },
  {
+  "id": "his-026",
+  "topic": "history",
+  "title": "The ancient Greeks had a vending machine",
+  "body": "Hero of Alexandria described a coin-operated device in the first century AD. A coin dropped onto a lever released a measured amount of holy water.",
+  "hook": "Clever automation is older than electricity."
+ },
+ {
+  "id": "his-027",
+  "topic": "history",
+  "title": "Cats were sacred in ancient Egypt",
+  "body": "Egyptians linked cats with the goddess Bastet. Killing one, even by accident, could bring severe punishment, and many cats were mummified.",
+  "hook": "What a culture protects reveals what it values."
+ },
+ {
+  "id": "his-028",
+  "topic": "history",
+  "title": "The first speeding ticket was for 8 mph",
+  "body": "In 1896 Walter Arnold was fined in Kent for driving at about 8 mph, four times the limit of 2 mph in town. A man with a flag was supposed to walk ahead of cars.",
+  "hook": "Every new technology outpaces its rules."
+ },
+ {
+  "id": "his-029",
+  "topic": "history",
+  "title": "Queen Victoria's reign was not the longest British reign",
+  "body": "Victoria reigned for 63 years. Elizabeth II overtook her in 2015 and reigned for 70 years.",
+  "hook": "Records are made to be broken, eventually."
+ },
+ {
+  "id": "his-030",
+  "topic": "history",
+  "title": "The Spanish flu probably did not start in Spain",
+  "body": "Spain was neutral in the First World War and reported the 1918 flu openly. Countries at war censored news, so it looked like Spain was hit first.",
+  "hook": "Who reports a story can shape its name."
+ },
+ {
+  "id": "his-031",
+  "topic": "history",
+  "title": "Ancient Romans used urine to clean clothes",
+  "body": "Urine contains ammonia, which helps lift grease and dirt. Laundries called fullonicae collected it from public pots, and it was even taxed.",
+  "hook": "Yesterday's waste was someone's raw material."
+ },
+ {
+  "id": "his-032",
+  "topic": "history",
+  "title": "The Statue of Liberty was a gift from France",
+  "body": "It was designed by Frédéric Auguste Bartholdi and dedicated in 1886. Gustave Eiffel's company engineered its internal iron framework.",
+  "hook": "Friendship between nations can be cast in copper."
+ },
+ {
+  "id": "his-033",
+  "topic": "history",
+  "title": "The Statue of Liberty used to be brown",
+  "body": "It is covered in copper, which was originally a shiny reddish-brown. Over about 20 years, weathering turned it green.",
+  "hook": "Time changes even monuments."
+ },
+ {
+  "id": "his-034",
+  "topic": "history",
+  "title": "Ancient Egyptians used stone pillows",
+  "body": "Wealthier Egyptians slept with their heads on curved headrests made of wood or stone. They raised the head and may have kept insects away.",
+  "hook": "Comfort is shaped by climate and culture."
+ },
+ {
+  "id": "his-035",
+  "topic": "history",
+  "title": "The first Olympic marathon winner was a water carrier",
+  "body": "Spyridon Louis won the marathon at the 1896 Athens Olympics. He became a national hero in Greece.",
+  "hook": "Ordinary people can make extraordinary history."
+ },
+ {
+  "id": "his-036",
+  "topic": "history",
+  "title": "London's Big Ben is a bell, not the tower",
+  "body": "Big Ben is the nickname of the great bell. The tower was renamed the Elizabeth Tower in 2012.",
+  "hook": "Nicknames often stick to the wrong thing."
+ },
+ {
+  "id": "his-037",
+  "topic": "history",
+  "title": "Medieval castles were often colourful",
+  "body": "Many castle walls were whitewashed or painted, and interiors were bright with colour. We picture them grey because the paint has worn away.",
+  "hook": "Ruins hide how vivid the past was."
+ },
+ {
+  "id": "his-038",
+  "topic": "history",
+  "title": "The Mayflower later became a barn, some say",
+  "body": "A popular story claims the Mayflower's timbers were reused in a barn in Buckinghamshire. Historians consider the link possible but unproven.",
+  "hook": "Not every good story can be verified."
+ },
+ {
+  "id": "his-039",
+  "topic": "history",
+  "title": "Abacus users can still beat calculators",
+  "body": "Skilled abacus users can do arithmetic extremely fast. In a 1946 contest in Tokyo, an abacus user beat an electric calculator in most rounds.",
+  "hook": "Practised skill can rival machines."
+ },
+ {
+  "id": "his-040",
+  "topic": "history",
+  "title": "The Romans did not use the number zero",
+  "body": "Roman numerals have no symbol for zero. The concept of zero as a number came from India and spread through the Arab world.",
+  "hook": "Some ideas are invented, not discovered."
+ },
+ {
+  "id": "his-041",
+  "topic": "history",
+  "title": "Pirates rarely buried treasure",
+  "body": "Most pirates spent or traded their loot quickly. The buried treasure idea was popularised by the novel Treasure Island in 1883.",
+  "hook": "Fiction can shape how we imagine history."
+ },
+ {
+  "id": "his-042",
+  "topic": "history",
+  "title": "Ancient Greek statues were painted",
+  "body": "Traces of pigment show many Greek statues were brightly coloured. The pure white marble look we admire came later as paint wore off.",
+  "hook": "The past was more colourful than we think."
+ },
+ {
+  "id": "his-043",
+  "topic": "history",
+  "title": "The Leaning Tower of Pisa leaned during construction",
+  "body": "Building began in 1173, and the tower started tilting before it was finished because of soft ground. Builders tried to compensate by making upper floors slightly taller on one side.",
+  "hook": "Mistakes can become icons."
+ },
+ {
+  "id": "his-044",
+  "topic": "history",
+  "title": "Before alarm clocks there were knocker-ups",
+  "body": "In industrial Britain, people were paid to wake workers by tapping on windows with long poles or shooting peas at them.",
+  "hook": "Every problem creates a job."
+ },
+ {
+  "id": "his-045",
+  "topic": "history",
+  "title": "Lincoln was a licensed bartender",
+  "body": "Abraham Lincoln co-owned a store in New Salem, Illinois, which got a licence to sell liquor in 1833.",
+  "hook": "Leaders often have surprising early careers."
+ },
+ {
+  "id": "his-046",
+  "topic": "history",
+  "title": "The first known map of the world is Babylonian",
+  "body": "The Babylonian Map of the World, a clay tablet from around the 6th century BC, shows Babylon at the centre surrounded by water.",
+  "hook": "Maps show beliefs as much as places."
+ },
+ {
+  "id": "his-047",
+  "topic": "history",
+  "title": "The Ottoman Empire lasted over 600 years",
+  "body": "Founded around 1299, it ended in 1922. At its peak it stretched across parts of Europe, Asia and Africa.",
+  "hook": "Empires can last longer than nations exist today."
+ },
+ {
+  "id": "his-048",
+  "topic": "history",
+  "title": "Silk was a closely guarded Chinese secret",
+  "body": "For centuries China kept silk-making secret. Byzantine monks are said to have smuggled silkworm eggs to the West around 550 AD.",
+  "hook": "Industrial secrets have always been worth stealing."
+ },
+ {
+  "id": "his-049",
+  "topic": "history",
+  "title": "The Hanseatic League was a medieval trade network",
+  "body": "From the 13th to 17th centuries, towns across northern Europe joined forces to protect trade. It controlled much of Baltic commerce.",
+  "hook": "Cooperation can be as powerful as empire."
+ },
+ {
+  "id": "his-050",
+  "topic": "history",
+  "title": "Tea was once used as money",
+  "body": "In parts of Asia, compressed tea bricks were used as currency. They could be traded, or eaten and drunk if needed.",
+  "hook": "Money is whatever people agree to accept."
+ },
+ {
+  "id": "his-051",
+  "topic": "history",
+  "title": "The Gregorian calendar skipped days",
+  "body": "When Catholic countries adopted it in 1582, 10 days were skipped. Britain switched in 1752 and skipped 11 days.",
+  "hook": "Even time can be rearranged by decree."
+ },
+ {
+  "id": "his-052",
+  "topic": "history",
+  "title": "Ancient Rome had a population of about a million",
+  "body": "At its height around the 2nd century AD, Rome may have had up to a million people. No European city matched that again until London in the 1800s.",
+  "hook": "Cities can shrink as well as grow."
+ },
+ {
+  "id": "his-053",
+  "topic": "history",
+  "title": "The Battle of Hastings was not at Hastings",
+  "body": "It was fought in 1066 about 10 kilometres away, at what is now the town of Battle. The abbey there marks the spot.",
+  "hook": "Names drift from the places they describe."
+ },
+ {
+  "id": "his-054",
+  "topic": "history",
+  "title": "The Magna Carta was mostly repealed",
+  "body": "Of its original clauses, only three remain part of English law. Its lasting power is as a symbol of limits on power.",
+  "hook": "Symbols can outlast the text behind them."
+ },
+ {
+  "id": "his-055",
+  "topic": "history",
+  "title": "Thomas Edison did not invent the light bulb",
+  "body": "Many inventors made electric lights before him. Edison's team made a practical, long-lasting bulb and a system to power it.",
+  "hook": "Winning often means improving, not inventing."
+ },
+ {
+  "id": "his-056",
+  "topic": "history",
+  "title": "The first photograph took hours to expose",
+  "body": "Nicéphore Niépce's view from a window, made around 1826–27, needed an exposure of many hours, possibly days.",
+  "hook": "Instant was once unimaginable."
+ },
+ {
+  "id": "his-057",
+  "topic": "history",
+  "title": "Ancient Persians had refrigerators",
+  "body": "Yakhchals were domed structures that stored ice through hot desert summers using shade, insulation and evaporation.",
+  "hook": "Clever design can beat harsh climates."
+ },
+ {
+  "id": "his-058",
+  "topic": "history",
+  "title": "Women in Britain first voted nationally in 1918",
+  "body": "The Representation of the People Act 1918 gave some women over 30 the vote. Equal voting with men came in 1928.",
+  "hook": "Rights often arrive in stages."
+ },
+ {
+  "id": "his-059",
+  "topic": "history",
+  "title": "Tutankhamun's tomb was found nearly intact",
+  "body": "Howard Carter found it in 1922. Most Egyptian royal tombs had been robbed long before.",
+  "hook": "Being forgotten can protect you."
+ },
+ {
+  "id": "his-060",
+  "topic": "history",
+  "title": "The first email was sent in 1971",
+  "body": "Ray Tomlinson sent it between two computers next to each other. He chose the @ sign to separate user and machine names.",
+  "hook": "Big shifts can start with small tests."
+ },
+ {
+  "id": "his-061",
+  "topic": "history",
+  "title": "The Inca kept records with knots",
+  "body": "Quipu were cords with knots that recorded numbers and possibly other information. Experts still debate how much they could record.",
+  "hook": "Writing is not the only way to remember."
+ },
+ {
+  "id": "his-062",
+  "topic": "history",
+  "title": "Gladiators were not always fought to the death",
+  "body": "Gladiators were expensive to train, and many bouts ended without a death. A defeated fighter could be spared.",
+  "hook": "Spectacle and economics are often linked."
+ },
+ {
+  "id": "his-063",
+  "topic": "history",
+  "title": "The Berlin Wall fell partly by mistake",
+  "body": "On 9 November 1989, an East German spokesman wrongly said new travel rules applied immediately. Crowds gathered at the border, and guards opened the gates.",
+  "hook": "History can turn on one confused announcement."
+ },
+ {
+  "id": "his-064",
+  "topic": "history",
+  "title": "Ancient Mesopotamians invented the 60-minute hour",
+  "body": "The Babylonians used a base-60 number system. That is why we have 60 seconds in a minute and 360 degrees in a circle.",
+  "hook": "Old maths still runs our clocks."
+ },
+ {
+  "id": "his-065",
+  "topic": "history",
+  "title": "Lady Godiva's ride may be a legend",
+  "body": "The story of her riding naked through Coventry first appears long after her death. Historians doubt it happened.",
+  "hook": "Legends can attach to real people."
+ },
+ {
+  "id": "his-066",
+  "topic": "history",
+  "title": "The Great Stink pushed London to build sewers",
+  "body": "In the hot summer of 1858, the stench from the Thames was so bad that Parliament acted. Joseph Bazalgette's sewers followed.",
+  "hook": "Crisis can force overdue change."
+ },
+ {
+  "id": "his-067",
+  "topic": "history",
+  "title": "The ancient Greeks invented the Olympics in 776 BC",
+  "body": "The first recorded Games at Olympia had one event, a short foot race. More events were added over centuries.",
+  "hook": "Big traditions can start small."
+ },
+ {
+  "id": "his-068",
+  "topic": "history",
+  "title": "Chess was once played with different rules",
+  "body": "The queen used to be a weak piece. Around 1475, rules in Spain made her the most powerful piece, speeding up the game.",
+  "hook": "Games evolve to stay exciting."
+ },
+ {
+  "id": "his-069",
+  "topic": "history",
+  "title": "The first vaccine came from cowpox",
+  "body": "In 1796 Edward Jenner showed that cowpox could protect against smallpox. The word vaccine comes from the Latin \"vacca\", meaning cow.",
+  "hook": "Breakthroughs can come from careful observation."
+ },
+ {
+  "id": "his-070",
+  "topic": "history",
+  "title": "Smallpox is the only human disease eradicated",
+  "body": "The WHO declared smallpox eradicated in 1980 after a global vaccination campaign. It had killed hundreds of millions.",
+  "hook": "Global cooperation can end a plague."
+ },
+ {
+  "id": "his-071",
+  "topic": "history",
+  "title": "The first postage stamp was the Penny Black",
+  "body": "Issued in Britain in 1840, it let the sender prepay postage. Before, the receiver often paid.",
+  "hook": "Small fixes can transform a system."
+ },
+ {
+  "id": "his-072",
+  "topic": "history",
+  "title": "Ancient Egyptians invented toothpaste of a kind",
+  "body": "They used mixtures that included powdered ox hooves, ashes and eggshells. It was rough but helped clean teeth.",
+  "hook": "Hygiene is an ancient pursuit."
+ },
+ {
+  "id": "his-073",
+  "topic": "history",
+  "title": "The longest-reigning monarch ruled 72 years",
+  "body": "Louis XIV of France reigned from 1643 to 1715, starting at age four. He built the Palace of Versailles.",
+  "hook": "Inheriting power young can mean holding it long."
+ },
+ {
+  "id": "his-074",
+  "topic": "history",
+  "title": "Medieval monks invented a form of champagne, by legend",
+  "body": "Dom Pérignon is often credited, but sparkling wine existed before him. He worked to improve wine quality.",
+  "hook": "Credit often goes to the famous name."
+ },
+ {
+  "id": "his-075",
+  "topic": "history",
+  "title": "Venice was built on wooden piles",
+  "body": "Millions of wooden stakes driven into the mud support the city. Underwater and without oxygen, the wood has lasted for centuries.",
+  "hook": "Hidden foundations hold up whole cities."
+ },
+ {
+  "id": "his-076",
+  "topic": "history",
+  "title": "The Wright brothers' first flight lasted 12 seconds",
+  "body": "On 17 December 1903, Orville Wright flew about 37 metres. Later that day Wilbur flew 260 metres in 59 seconds.",
+  "hook": "The beginning of something huge can look tiny."
+ },
+ {
+  "id": "his-077",
+  "topic": "history",
+  "title": "Ancient Rome had a central heating system",
+  "body": "Wealthy Romans used the hypocaust, which circulated hot air under floors and inside walls.",
+  "hook": "Comfort engineering has a long history."
+ },
+ {
+  "id": "his-078",
+  "topic": "history",
+  "title": "The Taj Mahal took about 20 years to build",
+  "body": "Mughal emperor Shah Jahan ordered it in memory of his wife Mumtaz Mahal. Around 20,000 workers were involved.",
+  "hook": "Grief can inspire great works."
+ },
+ {
+  "id": "his-079",
+  "topic": "history",
+  "title": "The Domesday Book was a royal survey",
+  "body": "In 1086 William the Conqueror ordered a survey of land and property across much of England. It recorded about 13,000 places.",
+  "hook": "Governments have always wanted data."
+ },
+ {
+  "id": "his-080",
+  "topic": "history",
+  "title": "The first British banknotes were handwritten",
+  "body": "The Bank of England, founded in 1694, issued handwritten notes for specific amounts. Fully printed notes came later.",
+  "hook": "Trust in paper had to be built."
+ },
+ {
+  "id": "his-081",
+  "topic": "history",
+  "title": "Hadrian's Wall stretched coast to coast",
+  "body": "Built from AD 122, it ran about 117 kilometres across northern England. It had forts, gates and watchtowers along its length.",
+  "hook": "Borders have long been built in stone."
+ },
+ {
+  "id": "his-082",
+  "topic": "history",
+  "title": "The Great Pyramid was the tallest structure for millennia",
+  "body": "At about 146 metres originally, it was the tallest human-made structure for around 3,800 years. Lincoln Cathedral's spire overtook it around 1311.",
+  "hook": "Some records last almost forever."
+ },
+ {
+  "id": "his-083",
+  "topic": "history",
+  "title": "Ancient Rome had a fire brigade",
+  "body": "Emperor Augustus created the Vigiles in AD 6. They fought fires and patrolled the streets at night.",
+  "hook": "Public services grow with cities."
+ },
+ {
+  "id": "his-084",
+  "topic": "history",
+  "title": "The first public museum opened in Oxford",
+  "body": "The Ashmolean Museum opened in 1683. It is often called Britain's first public museum.",
+  "hook": "Knowledge became public property slowly."
+ },
+ {
+  "id": "his-085",
+  "topic": "history",
+  "title": "Spartan boys started military training at seven",
+  "body": "In ancient Sparta, boys entered the agoge, a tough state training programme. It shaped them into soldiers.",
+  "hook": "Societies raise people for their priorities."
+ },
+ {
+  "id": "his-086",
+  "topic": "history",
+  "title": "Ancient Chinese used dragon bones to find writing",
+  "body": "In 1899, scholars noticed inscriptions on \"dragon bones\" sold as medicine. They were oracle bones, the earliest known Chinese writing.",
+  "hook": "Treasure can hide in plain sight."
+ },
+ {
   "id": "sci-001",
   "topic": "science",
   "title": "Honey never goes off",
@@ -348,6 +775,412 @@
   "title": "Atoms are mostly empty space",
   "body": "If an atom's nucleus were the size of a marble, the atom would be about the size of a football stadium. Almost all the mass sits in that tiny centre.",
   "hook": "Solid things are mostly nothing at all."
+ },
+ {
+  "id": "sci-026",
+  "topic": "science",
+  "title": "Your nose can tell apart a huge number of smells",
+  "body": "A 2014 study suggested humans could distinguish over a trillion odours, though other scientists challenged the maths. Either way, it is far more than once thought.",
+  "hook": "Our senses are underrated."
+ },
+ {
+  "id": "sci-027",
+  "topic": "science",
+  "title": "A single bolt of lightning carries huge energy",
+  "body": "A typical lightning flash carries about a billion joules. But it lasts so briefly that capturing it is impractical.",
+  "hook": "Power and usefulness are different things."
+ },
+ {
+  "id": "sci-028",
+  "topic": "science",
+  "title": "Earth's core is about as hot as the Sun's surface",
+  "body": "Scientists estimate the inner core is around 5,200°C. It stays solid because of enormous pressure.",
+  "hook": "Pressure can change how matter behaves."
+ },
+ {
+  "id": "sci-029",
+  "topic": "science",
+  "title": "Sweat itself has almost no smell",
+  "body": "Body odour comes mostly from bacteria breaking down sweat on the skin. Fresh sweat is nearly odourless.",
+  "hook": "The smell is the side effect, not the cause."
+ },
+ {
+  "id": "sci-030",
+  "topic": "science",
+  "title": "Light can bend around gravity",
+  "body": "Massive objects like galaxies bend light passing nearby. Astronomers use this gravitational lensing to see even more distant objects.",
+  "hook": "Gravity can act like a lens."
+ },
+ {
+  "id": "sci-031",
+  "topic": "science",
+  "title": "Your ears keep growing",
+  "body": "Ears and noses appear to get larger with age, partly because cartilage and skin change over time.",
+  "hook": "Bodies keep changing all life long."
+ },
+ {
+  "id": "sci-032",
+  "topic": "science",
+  "title": "Plants can be grown without soil",
+  "body": "Hydroponics grows plants in water with dissolved nutrients. Many supermarket herbs and lettuces are grown this way.",
+  "hook": "Soil is helpful, not essential."
+ },
+ {
+  "id": "sci-033",
+  "topic": "science",
+  "title": "Sunsets are red because of scattering",
+  "body": "When the Sun is low, its light passes through more air. Blue light scatters away, leaving reds and oranges.",
+  "hook": "The same physics makes the sky blue by day."
+ },
+ {
+  "id": "sci-034",
+  "topic": "science",
+  "title": "Some frogs can freeze solid and survive",
+  "body": "The wood frog can have much of its body water freeze in winter. Glucose acts as antifreeze in its cells, and it thaws in spring.",
+  "hook": "Life finds a way through extremes."
+ },
+ {
+  "id": "sci-035",
+  "topic": "science",
+  "title": "Your heart beats around 100,000 times a day",
+  "body": "At about 70 beats per minute, that is roughly 2.5 billion beats in an average lifetime.",
+  "hook": "Steady repetition adds up."
+ },
+ {
+  "id": "sci-036",
+  "topic": "science",
+  "title": "Water expands when it freezes",
+  "body": "Most substances shrink as they solidify, but ice is less dense than water. That is why ice floats and pipes can burst.",
+  "hook": "Exceptions to rules can shape whole planets."
+ },
+ {
+  "id": "sci-037",
+  "topic": "science",
+  "title": "Stars twinkle because of Earth's air",
+  "body": "Moving layers of air bend starlight slightly. Planets twinkle less because they appear as tiny discs rather than points.",
+  "hook": "What you see depends on what is in between."
+ },
+ {
+  "id": "sci-038",
+  "topic": "science",
+  "title": "Sharks existed before trees",
+  "body": "Sharks appear in the fossil record over 400 million years ago. The first true trees evolved around 385 million years ago.",
+  "hook": "Some designs are just very good."
+ },
+ {
+  "id": "sci-039",
+  "topic": "science",
+  "title": "Humans glow faintly",
+  "body": "The body gives off a tiny amount of visible light from chemical reactions. It is about 1,000 times too weak for our eyes to see.",
+  "hook": "There is more around us than we perceive."
+ },
+ {
+  "id": "sci-040",
+  "topic": "science",
+  "title": "DNA in one cell is about two metres long",
+  "body": "Stretched out, the DNA in a single human cell would be roughly two metres long. It is packed tightly into a nucleus too small to see.",
+  "hook": "Packing is a superpower."
+ },
+ {
+  "id": "sci-041",
+  "topic": "science",
+  "title": "Venus flytraps count",
+  "body": "A Venus flytrap closes only when trigger hairs are touched twice within about 20 seconds. That avoids wasting energy on raindrops.",
+  "hook": "Simple counting saves energy."
+ },
+ {
+  "id": "sci-042",
+  "topic": "science",
+  "title": "Some bacteria can eat plastic",
+  "body": "In 2016 scientists in Japan found a bacterium that breaks down PET plastic. Researchers are studying its enzymes to speed up recycling.",
+  "hook": "Nature adapts to what we leave behind."
+ },
+ {
+  "id": "sci-043",
+  "topic": "science",
+  "title": "You are taller in the morning",
+  "body": "Discs in your spine compress during the day. You can be about a centimetre shorter by evening.",
+  "hook": "Gravity works on you all day."
+ },
+ {
+  "id": "sci-044",
+  "topic": "science",
+  "title": "Most dust in homes is not dead skin",
+  "body": "Studies suggest much household dust comes from outdoors, tracked in on shoes or blown in. Skin is part of it, but not most.",
+  "hook": "Common facts deserve a second look."
+ },
+ {
+  "id": "sci-045",
+  "topic": "science",
+  "title": "Helium is running low on Earth",
+  "body": "Helium is light enough to escape into space once released. Most is collected from natural gas fields, and supplies are limited.",
+  "hook": "Even the most common element in stars can be scarce here."
+ },
+ {
+  "id": "sci-046",
+  "topic": "science",
+  "title": "Electric eels can produce 600 volts",
+  "body": "They use special cells called electrocytes, stacked like batteries. The shock stuns prey and deters predators.",
+  "hook": "Biology invented batteries first."
+ },
+ {
+  "id": "sci-047",
+  "topic": "science",
+  "title": "Your brain cannot feel pain",
+  "body": "The brain has no pain receptors, so surgeons can operate while patients are awake. Headaches come from surrounding tissues.",
+  "hook": "The organ that feels everything feels nothing itself."
+ },
+ {
+  "id": "sci-048",
+  "topic": "science",
+  "title": "Earth is not a perfect sphere",
+  "body": "It bulges at the equator because of its spin. The diameter at the equator is about 43 kilometres larger than pole to pole.",
+  "hook": "Spin shapes planets."
+ },
+ {
+  "id": "sci-049",
+  "topic": "science",
+  "title": "Pure water does not conduct electricity well",
+  "body": "Dissolved salts and minerals make water conductive. Very pure water is a poor conductor.",
+  "hook": "It is the impurities that carry the current."
+ },
+ {
+  "id": "sci-050",
+  "topic": "science",
+  "title": "The placebo effect can be real",
+  "body": "Patients given inactive treatments sometimes report genuine improvements, especially in pain. Expectations can change how the body responds.",
+  "hook": "Belief has measurable effects."
+ },
+ {
+  "id": "sci-051",
+  "topic": "science",
+  "title": "The speed of light is a cosmic speed limit",
+  "body": "Nothing with mass can reach light speed. At about 300,000 kilometres per second, light could circle Earth over seven times in a second.",
+  "hook": "Some limits are built into physics."
+ },
+ {
+  "id": "sci-052",
+  "topic": "science",
+  "title": "Kidney stones can come from too little water",
+  "body": "Not drinking enough lets minerals concentrate in urine and form crystals. Staying hydrated is a key prevention.",
+  "hook": "Simple habits prevent painful problems."
+ },
+ {
+  "id": "sci-053",
+  "topic": "science",
+  "title": "Gold is mostly from colliding stars",
+  "body": "Many heavy elements, including gold, are thought to form when neutron stars collide. The gold in jewellery may be older than the Earth.",
+  "hook": "You may be wearing stardust."
+ },
+ {
+  "id": "sci-054",
+  "topic": "science",
+  "title": "Your skin is your largest organ",
+  "body": "For an adult, skin covers around two square metres. It protects, regulates temperature and senses the world.",
+  "hook": "The outside of you is an organ too."
+ },
+ {
+  "id": "sci-055",
+  "topic": "science",
+  "title": "Ants can lift many times their body weight",
+  "body": "Some ants can carry objects many times heavier than themselves. Their small size makes this easier than it would be for large animals.",
+  "hook": "Strength scales strangely with size."
+ },
+ {
+  "id": "sci-056",
+  "topic": "science",
+  "title": "Carbon dating has a limit",
+  "body": "Radiocarbon dating works on organic material up to about 50,000 years old. After that, too little carbon-14 remains to measure.",
+  "hook": "Every tool has a range."
+ },
+ {
+  "id": "sci-057",
+  "topic": "science",
+  "title": "Your gut has its own nervous system",
+  "body": "The enteric nervous system has hundreds of millions of neurons. It can run digestion with little input from the brain.",
+  "hook": "There is a second brain in your belly, of sorts."
+ },
+ {
+  "id": "sci-058",
+  "topic": "science",
+  "title": "Snowflakes are not all unique, technically",
+  "body": "Simple tiny snow crystals can look identical. Large, complex snowflakes are almost certainly all different.",
+  "hook": "The truth often depends on the detail."
+ },
+ {
+  "id": "sci-059",
+  "topic": "science",
+  "title": "Mosquitoes find you partly by your breath",
+  "body": "They detect carbon dioxide from many metres away, then use heat and smell to close in.",
+  "hook": "Breathing gives you away."
+ },
+ {
+  "id": "sci-060",
+  "topic": "science",
+  "title": "Cooking may have helped make our brains bigger",
+  "body": "Some scientists argue cooking made food easier to digest, freeing energy for brain growth. It remains a debated theory.",
+  "hook": "Technology may have shaped our biology."
+ },
+ {
+  "id": "sci-061",
+  "topic": "science",
+  "title": "Saliva starts digestion",
+  "body": "An enzyme in saliva, amylase, begins breaking down starch in your mouth. Chew bread long enough and it starts to taste sweet.",
+  "hook": "Digestion starts before you swallow."
+ },
+ {
+  "id": "sci-062",
+  "topic": "science",
+  "title": "Blue whales have hearts the size of a small car",
+  "body": "A blue whale's heart can weigh around 180 kilograms. Its heartbeat can be detected from kilometres away.",
+  "hook": "Size changes everything."
+ },
+ {
+  "id": "sci-063",
+  "topic": "science",
+  "title": "Rust is slow burning",
+  "body": "Rusting and burning are both reactions with oxygen. Rust happens slowly; fire happens fast and releases heat and light.",
+  "hook": "Same chemistry, different speed."
+ },
+ {
+  "id": "sci-064",
+  "topic": "science",
+  "title": "Your eyes see upside down",
+  "body": "The lens of your eye projects an upside-down image onto the retina. Your brain flips it the right way up.",
+  "hook": "Perception is partly construction."
+ },
+ {
+  "id": "sci-065",
+  "topic": "science",
+  "title": "Bones are stronger than steel by weight",
+  "body": "Gram for gram, bone can be stronger than some steels. It is light, flexible and constantly repaired.",
+  "hook": "Living materials can rival engineered ones."
+ },
+ {
+  "id": "sci-066",
+  "topic": "science",
+  "title": "Tears differ by cause",
+  "body": "Scientists distinguish basal, reflex and emotional tears. Their chemical make-up varies.",
+  "hook": "Even tears have types."
+ },
+ {
+  "id": "sci-067",
+  "topic": "science",
+  "title": "Some trees are thousands of years old",
+  "body": "A Great Basin bristlecone pine in California is over 4,800 years old. It was already old when the pyramids were built.",
+  "hook": "Slow and steady can last millennia."
+ },
+ {
+  "id": "sci-068",
+  "topic": "science",
+  "title": "A day on Earth is getting longer",
+  "body": "Tidal friction from the Moon is slowing Earth's spin. Days lengthen by about 1.8 milliseconds per century.",
+  "hook": "Even time is changing."
+ },
+ {
+  "id": "sci-069",
+  "topic": "science",
+  "title": "The appendix may have a purpose",
+  "body": "It was long thought useless, but some research suggests it stores helpful gut bacteria. The question is still being studied.",
+  "hook": "Calling something useless can be premature."
+ },
+ {
+  "id": "sci-070",
+  "topic": "science",
+  "title": "Microwaves heat water molecules",
+  "body": "Microwave ovens make water molecules vibrate, producing heat. Food with more water heats faster.",
+  "hook": "Invisible waves do everyday work."
+ },
+ {
+  "id": "sci-071",
+  "topic": "science",
+  "title": "Yawning may cool the brain",
+  "body": "One theory says yawning brings in cooler air to regulate brain temperature. Why yawns are contagious is still debated.",
+  "hook": "Common behaviours can still be mysteries."
+ },
+ {
+  "id": "sci-072",
+  "topic": "science",
+  "title": "The Dead Sea lets you float",
+  "body": "Its water is about ten times saltier than the ocean. The high density pushes swimmers up.",
+  "hook": "Density decides what sinks."
+ },
+ {
+  "id": "sci-073",
+  "topic": "science",
+  "title": "Sound can break glass",
+  "body": "If a sound matches a glass's natural resonant frequency and is loud enough, the vibrations can shatter it.",
+  "hook": "The right frequency beats raw force."
+ },
+ {
+  "id": "sci-074",
+  "topic": "science",
+  "title": "Cows produce methane mostly by burping",
+  "body": "Microbes in a cow's stomach produce methane as they digest grass. Most is released through burps, not the other end.",
+  "hook": "Details matter in climate science."
+ },
+ {
+  "id": "sci-075",
+  "topic": "science",
+  "title": "Diamonds can burn",
+  "body": "Heat a diamond to around 700–900°C with oxygen and it will burn, turning into carbon dioxide.",
+  "hook": "Forever is relative."
+ },
+ {
+  "id": "sci-076",
+  "topic": "science",
+  "title": "Your fingernails grow faster than toenails",
+  "body": "Fingernails grow around 3 millimetres a month. Toenails grow more slowly, roughly a third as fast.",
+  "hook": "Different parts age at different speeds."
+ },
+ {
+  "id": "sci-077",
+  "topic": "science",
+  "title": "Lobster blood is colourless until exposed to air",
+  "body": "It contains copper-based haemocyanin, which turns blue when it binds with oxygen.",
+  "hook": "Colour can be a chemical signal."
+ },
+ {
+  "id": "sci-078",
+  "topic": "science",
+  "title": "Light from distant stars may be very old",
+  "body": "Some stars we see are thousands of light years away. Their light left them thousands of years ago.",
+  "hook": "Looking up is looking back."
+ },
+ {
+  "id": "sci-079",
+  "topic": "science",
+  "title": "Ice can be one of many types",
+  "body": "Scientists have identified around 20 different forms of solid water. Most only exist at extreme pressures.",
+  "hook": "Even familiar substances have hidden variety."
+ },
+ {
+  "id": "sci-080",
+  "topic": "science",
+  "title": "Fireflies make cold light",
+  "body": "Fireflies produce light through a chemical reaction that wastes almost no energy as heat.",
+  "hook": "Nature built efficient lighting long ago."
+ },
+ {
+  "id": "sci-081",
+  "topic": "science",
+  "title": "Tomatoes are botanically fruit",
+  "body": "Botanically, a fruit develops from a flower and contains seeds. Tomatoes, cucumbers and peppers all qualify.",
+  "hook": "Kitchen and science categories differ."
+ },
+ {
+  "id": "sci-082",
+  "topic": "science",
+  "title": "Laughing is contagious for a reason",
+  "body": "Hearing laughter activates brain regions that prepare us to laugh too. It may help bond groups together.",
+  "hook": "Shared emotion is social glue."
+ },
+ {
+  "id": "sci-083",
+  "topic": "science",
+  "title": "Your sense of smell is linked to memory",
+  "body": "Smell signals travel close to brain areas for memory and emotion. That is why a scent can bring back a vivid moment.",
+  "hook": "Memory has a nose."
  },
  {
   "id": "bus-001",
@@ -525,6 +1358,412 @@
   "hook": "Process innovation can matter more than product."
  },
  {
+  "id": "bus-026",
+  "topic": "business",
+  "title": "IKEA's flat-pack idea started with a table leg",
+  "body": "In the 1950s, an IKEA employee removed the legs from a table to fit it in a car. Flat-packing cut shipping and storage costs.",
+  "hook": "Constraints can spark the best ideas."
+ },
+ {
+  "id": "bus-027",
+  "topic": "business",
+  "title": "Starbucks is named after a fictional character",
+  "body": "The name comes from Starbuck, the first mate in Herman Melville's Moby-Dick. The founders wanted something evocative of the sea.",
+  "hook": "Brands borrow stories."
+ },
+ {
+  "id": "bus-028",
+  "topic": "business",
+  "title": "The first online sale is often dated to 1994",
+  "body": "In August 1994, a CD by Sting was sold online through a site called NetMarket, using encryption to protect the card details.",
+  "hook": "Every giant market had a first customer."
+ },
+ {
+  "id": "bus-029",
+  "topic": "business",
+  "title": "Most of a company's value can be intangible",
+  "body": "For many large listed firms, brands, software and patents make up most of the market value, not buildings or machines.",
+  "hook": "The valuable stuff is often invisible."
+ },
+ {
+  "id": "bus-030",
+  "topic": "business",
+  "title": "Anchoring shapes negotiations",
+  "body": "The first number mentioned in a negotiation tends to pull the final result towards it. Researchers call this anchoring.",
+  "hook": "Going first can be an advantage."
+ },
+ {
+  "id": "bus-031",
+  "topic": "business",
+  "title": "Toyota's cars are built just in time",
+  "body": "Toyota pioneered making parts only as they are needed. It cut waste and storage but made the company sensitive to supply shocks.",
+  "hook": "Efficiency and resilience pull in opposite directions."
+ },
+ {
+  "id": "bus-032",
+  "topic": "business",
+  "title": "Kodak invented the digital camera",
+  "body": "A Kodak engineer built a digital camera prototype in 1975. The company feared hurting its film business and was slow to embrace it.",
+  "hook": "Protecting the old can block the new."
+ },
+ {
+  "id": "bus-033",
+  "topic": "business",
+  "title": "The first Apple logo showed Isaac Newton",
+  "body": "Apple's 1976 logo was a detailed drawing of Newton sitting under an apple tree. It was soon replaced by the simpler apple.",
+  "hook": "Simple usually wins in branding."
+ },
+ {
+  "id": "bus-034",
+  "topic": "business",
+  "title": "Gillette's razor model sells blades",
+  "body": "Selling a cheap handle and profiting on replacement blades is known as the razor and blades model. Printers and coffee pods use it too.",
+  "hook": "The profit is often in the refill."
+ },
+ {
+  "id": "bus-035",
+  "topic": "business",
+  "title": "Many banknotes contain cotton, not paper",
+  "body": "US dollar notes are about 75 percent cotton and 25 percent linen. That makes them durable enough to survive the wash.",
+  "hook": "Money is built to last."
+ },
+ {
+  "id": "bus-036",
+  "topic": "business",
+  "title": "The price of a Big Mac tracks currencies",
+  "body": "The Economist's Big Mac Index compares burger prices to judge if currencies are over- or under-valued. It started as a light-hearted guide in 1986.",
+  "hook": "Simple comparisons make complex ideas clear."
+ },
+ {
+  "id": "bus-037",
+  "topic": "business",
+  "title": "Rolex is owned by a charitable foundation",
+  "body": "The Hans Wilsdorf Foundation owns Rolex. The founder set it up in 1945, and it holds the company today.",
+  "hook": "Ownership structures can be unexpected."
+ },
+ {
+  "id": "bus-038",
+  "topic": "business",
+  "title": "McDonald's sells mostly through franchises",
+  "body": "Most McDonald's restaurants are run by franchisees. The company earns rent and fees from them.",
+  "hook": "Some businesses are property companies at heart."
+ },
+ {
+  "id": "bus-039",
+  "topic": "business",
+  "title": "Coffee is one of the most traded commodities",
+  "body": "Coffee is grown in over 50 countries and traded worldwide. Millions of farmers depend on it for income.",
+  "hook": "Your morning cup links to a global market."
+ },
+ {
+  "id": "bus-040",
+  "topic": "business",
+  "title": "Free trials often turn into subscriptions",
+  "body": "Many people forget to cancel free trials. Firms count on this, which is why many countries now require clear reminders.",
+  "hook": "Defaults drive behaviour."
+ },
+ {
+  "id": "bus-041",
+  "topic": "business",
+  "title": "The term \"boycott\" comes from a land agent",
+  "body": "In 1880 Irish tenants refused to deal with Captain Charles Boycott. His name became the word for refusing to trade with someone.",
+  "hook": "Collective action can make history."
+ },
+ {
+  "id": "bus-042",
+  "topic": "business",
+  "title": "Fax machines predate the telephone",
+  "body": "Alexander Bain patented an early fax system in 1843, decades before the telephone was patented in 1876.",
+  "hook": "Old ideas can wait for the right moment."
+ },
+ {
+  "id": "bus-043",
+  "topic": "business",
+  "title": "Supermarkets pipe in the smell of bread",
+  "body": "Some stores use bakeries near the entrance so the smell of fresh bread greets shoppers. Pleasant smells can lift spending.",
+  "hook": "Every sense can be used to sell."
+ },
+ {
+  "id": "bus-044",
+  "topic": "business",
+  "title": "The number of business days in a year is about 252",
+  "body": "Stock markets are closed on weekends and holidays. That leaves about 252 trading days a year in the US.",
+  "hook": "Finance runs on its own calendar."
+ },
+ {
+  "id": "bus-045",
+  "topic": "business",
+  "title": "Bitcoin's creator is unknown",
+  "body": "Bitcoin was launched in 2009 by someone using the name Satoshi Nakamoto. Their true identity has never been confirmed.",
+  "hook": "Some of the biggest ideas are anonymous."
+ },
+ {
+  "id": "bus-046",
+  "topic": "business",
+  "title": "Branded goods often come from the same factory",
+  "body": "Many supermarket own-brand products are made by the same manufacturers as big brands, sometimes on the same lines.",
+  "hook": "The label can matter more than the product."
+ },
+ {
+  "id": "bus-047",
+  "topic": "business",
+  "title": "Loyalty schemes date back centuries",
+  "body": "In the 1700s some American merchants gave customers copper tokens to redeem for later purchases. Stamps and points followed.",
+  "hook": "Rewarding repeat business is timeless."
+ },
+ {
+  "id": "bus-048",
+  "topic": "business",
+  "title": "Companies can be older than countries",
+  "body": "Some businesses, like Japan's Nishiyama Onsen Keiunkan inn founded in 705, are older than many modern nations.",
+  "hook": "Businesses can outlive governments."
+ },
+ {
+  "id": "bus-049",
+  "topic": "business",
+  "title": "The Dutch East India Company issued the first public shares",
+  "body": "Founded in 1602, it sold shares to the public and is often called the first publicly traded company.",
+  "hook": "Modern finance has old roots."
+ },
+ {
+  "id": "bus-050",
+  "topic": "business",
+  "title": "Inflation means prices rise over time",
+  "body": "If inflation is 2 percent a year, prices double in roughly 35 years. Savings that earn nothing slowly lose value.",
+  "hook": "Standing still can mean falling behind."
+ },
+ {
+  "id": "bus-051",
+  "topic": "business",
+  "title": "Scarcity makes things seem more valuable",
+  "body": "Studies found people rated cookies from a nearly empty jar as tastier than identical ones from a full jar.",
+  "hook": "Limited supply sells."
+ },
+ {
+  "id": "bus-052",
+  "topic": "business",
+  "title": "Many famous brands started in garages",
+  "body": "Garages are a classic start-up story because they are cheap and available. HP's original garage in Palo Alto is now a historic landmark.",
+  "hook": "Start where you are with what you have."
+ },
+ {
+  "id": "bus-053",
+  "topic": "business",
+  "title": "Barcodes were inspired by Morse code",
+  "body": "Inventor Norman Joseph Woodland reportedly drew Morse code dots and dashes in sand and stretched them into lines.",
+  "hook": "Ideas borrow from other fields."
+ },
+ {
+  "id": "bus-054",
+  "topic": "business",
+  "title": "Price matching can reduce competition",
+  "body": "When shops promise to match rivals' prices, competitors have less reason to cut prices. Economists debate the effect.",
+  "hook": "A promise to customers can also signal to rivals."
+ },
+ {
+  "id": "bus-055",
+  "topic": "business",
+  "title": "Social proof drives sales",
+  "body": "People are more likely to buy something if they see others doing it. Reviews, ratings and \"bestseller\" labels exploit this.",
+  "hook": "We follow the crowd more than we think."
+ },
+ {
+  "id": "bus-056",
+  "topic": "business",
+  "title": "Most start-ups fail",
+  "body": "Studies of start-ups suggest the majority do not survive a decade. Running out of money is a common reason.",
+  "hook": "Survival is the first win."
+ },
+ {
+  "id": "bus-057",
+  "topic": "business",
+  "title": "Shipping costs used to dwarf product costs",
+  "body": "Before containers, loading and unloading could be a huge share of the cost of trade. Containers cut that dramatically.",
+  "hook": "Logistics can decide what is worth making."
+ },
+ {
+  "id": "bus-058",
+  "topic": "business",
+  "title": "Interest rates move house prices",
+  "body": "When borrowing is cheap, buyers can afford bigger mortgages, which tends to push prices up. Higher rates can cool the market.",
+  "hook": "Money's price affects every other price."
+ },
+ {
+  "id": "bus-059",
+  "topic": "business",
+  "title": "Coca-Cola's formula is a famous secret",
+  "body": "The company keeps its recipe in a vault in Atlanta. The secrecy itself has become part of the marketing.",
+  "hook": "Mystery can be a brand asset."
+ },
+ {
+  "id": "bus-060",
+  "topic": "business",
+  "title": "The 'paradox of choice' can stall buyers",
+  "body": "In a famous study, shoppers offered 6 jams bought more than those offered 24. Too many options can make people walk away.",
+  "hook": "Less choice can mean more sales."
+ },
+ {
+  "id": "bus-061",
+  "topic": "business",
+  "title": "The world's largest employer is not a company",
+  "body": "Organisations like the US Department of Defense and China's People's Liberation Army employ millions. Walmart is among the largest private ones.",
+  "hook": "Scale takes many forms."
+ },
+ {
+  "id": "bus-062",
+  "topic": "business",
+  "title": "A recession is often defined as two quarters of decline",
+  "body": "A common rule of thumb calls two consecutive quarters of falling GDP a recession. Official bodies use broader measures.",
+  "hook": "Simple rules help, but definitions vary."
+ },
+ {
+  "id": "bus-063",
+  "topic": "business",
+  "title": "Dynamic pricing changes by the minute",
+  "body": "Airlines and ride apps adjust prices based on demand, time and other factors. The same seat can cost very different amounts.",
+  "hook": "Price is a moving target."
+ },
+ {
+  "id": "bus-064",
+  "topic": "business",
+  "title": "Brand logos are often simplified over time",
+  "body": "Many companies have flattened and simplified their logos to work on small screens and app icons.",
+  "hook": "Design adapts to the medium."
+ },
+ {
+  "id": "bus-065",
+  "topic": "business",
+  "title": "Wrigley first sold soap and baking powder",
+  "body": "William Wrigley Jr. gave away chewing gum as a bonus with his products. The gum became more popular, so he switched.",
+  "hook": "Listen to what customers want."
+ },
+ {
+  "id": "bus-066",
+  "topic": "business",
+  "title": "The 'Veblen good' gets more desirable as it gets pricier",
+  "body": "Some luxury goods sell better at higher prices because the price signals status. Economist Thorstein Veblen described this.",
+  "hook": "Price can be part of the product."
+ },
+ {
+  "id": "bus-067",
+  "topic": "business",
+  "title": "The first company to hit a $1 trillion valuation was Apple",
+  "body": "Apple reached a $1 trillion market value in August 2018. Others followed soon after.",
+  "hook": "Big numbers become normal quickly."
+ },
+ {
+  "id": "bus-068",
+  "topic": "business",
+  "title": "Most money is digital",
+  "body": "Physical cash makes up only a small share of the money supply in many economies. The rest exists as bank balances.",
+  "hook": "Money is mostly information."
+ },
+ {
+  "id": "bus-069",
+  "topic": "business",
+  "title": "Credit scores date to the 1950s",
+  "body": "The FICO company was founded in 1956. Its credit scoring became widespread in US lending later.",
+  "hook": "Algorithms decided lending long before AI."
+ },
+ {
+  "id": "bus-070",
+  "topic": "business",
+  "title": "Patents last about 20 years",
+  "body": "In most countries, a patent gives an inventor exclusive rights for around 20 years. After that, anyone can use the invention.",
+  "hook": "Protection is temporary by design."
+ },
+ {
+  "id": "bus-071",
+  "topic": "business",
+  "title": "Long queues can attract more customers",
+  "body": "A busy restaurant signals quality. Some places are said to keep queues outside even with free tables inside.",
+  "hook": "Popularity can be self-fulfilling."
+ },
+ {
+  "id": "bus-072",
+  "topic": "business",
+  "title": "Moore's law guided chipmakers for decades",
+  "body": "In 1965 Gordon Moore predicted the number of transistors on a chip would keep doubling. The industry used it as a target.",
+  "hook": "A prediction can become a plan."
+ },
+ {
+  "id": "bus-073",
+  "topic": "business",
+  "title": "Warranties are often profitable add-ons",
+  "body": "Extended warranties sold at checkout can have high margins because many are never claimed.",
+  "hook": "The extras can make the money."
+ },
+ {
+  "id": "bus-074",
+  "topic": "business",
+  "title": "Thinking in opportunity cost helps decisions",
+  "body": "The cost of a choice includes the best alternative you give up. Spending an hour on one task means not spending it on another.",
+  "hook": "Every yes is a no to something else."
+ },
+ {
+  "id": "bus-075",
+  "topic": "business",
+  "title": "Lego bricks from 1958 still fit today",
+  "body": "Lego has kept the same basic stud-and-tube design since 1958, so old bricks connect with new ones.",
+  "hook": "Compatibility builds loyalty."
+ },
+ {
+  "id": "bus-076",
+  "topic": "business",
+  "title": "The first commercial was a 10-second clock ad",
+  "body": "In 1941 a Bulova watch ad aired on New York TV before a baseball game. It reportedly cost just a few dollars.",
+  "hook": "Every giant ad industry started with a small slot."
+ },
+ {
+  "id": "bus-077",
+  "topic": "business",
+  "title": "Gift cards often go unspent",
+  "body": "A share of gift card value is never redeemed. Retailers count some of that as profit, which is why they promote cards heavily.",
+  "hook": "Unused value is still value to someone."
+ },
+ {
+  "id": "bus-078",
+  "topic": "business",
+  "title": "Hotels use a \"rack rate\"",
+  "body": "The rack rate is a hotel's full published price. Few guests pay it, but it anchors discounts to look generous.",
+  "hook": "A high reference price makes deals feel better."
+ },
+ {
+  "id": "bus-079",
+  "topic": "business",
+  "title": "Most cars are white, black, grey or silver",
+  "body": "White, black, grey and silver dominate car sales worldwide because they are thought to hold resale value.",
+  "hook": "Safe choices often win in big purchases."
+ },
+ {
+  "id": "bus-080",
+  "topic": "business",
+  "title": "Tipping customs vary widely",
+  "body": "Tipping is expected in the US, modest in the UK, and can be seen as rude in Japan.",
+  "hook": "Business rules are cultural."
+ },
+ {
+  "id": "bus-081",
+  "topic": "business",
+  "title": "Nintendo started by making playing cards",
+  "body": "Founded in Kyoto in 1889, Nintendo produced hanafuda cards. It moved into toys and then video games much later.",
+  "hook": "A company's first product rarely defines it."
+ },
+ {
+  "id": "bus-082",
+  "topic": "business",
+  "title": "Samsung once sold dried fish",
+  "body": "Founded in 1938, Samsung began as a trading company dealing in groceries such as dried fish and noodles.",
+  "hook": "Diversification can reshape a business entirely."
+ },
+ {
+  "id": "bus-083",
+  "topic": "business",
+  "title": "Unilever's Lifebuoy soap launched in 1894",
+  "body": "Lever Brothers sold Lifebuoy as a hygiene soap in Victorian Britain. It is still sold in many countries today.",
+  "hook": "Brands can outlast their founders by a century."
+ },
+ {
   "id": "nat-001",
   "topic": "nature",
   "title": "Trees can share nutrients underground",
@@ -698,6 +1937,419 @@
   "title": "Butterflies taste with their feet",
   "body": "Butterflies have taste receptors on their feet. Landing on a leaf tells a female whether it suits her caterpillars.",
   "hook": "Senses can be placed where they are most useful."
+ },
+ {
+  "id": "nat-026",
+  "topic": "nature",
+  "title": "Polar bears have black skin",
+  "body": "Under their white-looking fur, polar bears have black skin that absorbs heat. Their fur is actually transparent and hollow.",
+  "hook": "Things are not always the colour they seem."
+ },
+ {
+  "id": "nat-027",
+  "topic": "nature",
+  "title": "A woodpecker's tongue wraps around its skull",
+  "body": "The tongue extends from the back of the mouth, around the skull, and helps cushion the brain from impact.",
+  "hook": "Anatomy can be wildly inventive."
+ },
+ {
+  "id": "nat-028",
+  "topic": "nature",
+  "title": "Some sharks must keep swimming to breathe",
+  "body": "Species like the great white rely on water flowing over their gills as they swim. Others can pump water while resting.",
+  "hook": "Not all sharks follow the same rule."
+ },
+ {
+  "id": "nat-029",
+  "topic": "nature",
+  "title": "Arctic terns make the longest migrations",
+  "body": "Arctic terns fly between the Arctic and Antarctic each year. Over a lifetime they may travel a distance equal to going to the Moon and back several times.",
+  "hook": "Small birds can be extreme travellers."
+ },
+ {
+  "id": "nat-030",
+  "topic": "nature",
+  "title": "Pigeons are smarter than their reputation",
+  "body": "Experiments suggest pigeons can learn to distinguish images and even recognise objects in pictures. They are smarter than their reputation.",
+  "hook": "Common animals can be underestimated."
+ },
+ {
+  "id": "nat-031",
+  "topic": "nature",
+  "title": "Squirrels forget where they bury many nuts",
+  "body": "Squirrels bury far more nuts than they eat. Forgotten ones can grow into new trees.",
+  "hook": "Forgetfulness can plant forests."
+ },
+ {
+  "id": "nat-032",
+  "topic": "nature",
+  "title": "Rats laugh when tickled",
+  "body": "Researchers found rats make high-pitched chirps when tickled, which some interpret as a form of laughter.",
+  "hook": "Joy may be more widespread than we think."
+ },
+ {
+  "id": "nat-033",
+  "topic": "nature",
+  "title": "A snail can sleep while stuck to a wall",
+  "body": "Snails rest in cycles, sometimes clinging to surfaces with dried mucus. They can stay attached for long periods.",
+  "hook": "Rest takes many forms."
+ },
+ {
+  "id": "nat-034",
+  "topic": "nature",
+  "title": "Kangaroos cannot walk backwards easily",
+  "body": "Their large tails and powerful legs make backward movement very awkward. They are built to bound forward.",
+  "hook": "Design shapes direction."
+ },
+ {
+  "id": "nat-035",
+  "topic": "nature",
+  "title": "Starfish can regrow arms",
+  "body": "Many starfish can regenerate lost arms. Some species can grow a whole new body from one arm if it contains part of the centre.",
+  "hook": "Healing can be remarkable."
+ },
+ {
+  "id": "nat-036",
+  "topic": "nature",
+  "title": "Hippos produce a reddish secretion",
+  "body": "Hippos release an oily red fluid that acts like sunscreen and may protect against germs. It is sometimes called blood sweat but is neither.",
+  "hook": "Names can mislead."
+ },
+ {
+  "id": "nat-037",
+  "topic": "nature",
+  "title": "Leaves change colour as green fades",
+  "body": "In autumn trees break down green chlorophyll. Yellow and orange pigments that were there all along show through.",
+  "hook": "Some colours are always present, just hidden."
+ },
+ {
+  "id": "nat-038",
+  "topic": "nature",
+  "title": "Elephants have a sensitive trunk",
+  "body": "An elephant's trunk has tens of thousands of muscles and can pick up a single peanut or lift heavy logs.",
+  "hook": "Flexibility and strength can coexist."
+ },
+ {
+  "id": "nat-039",
+  "topic": "nature",
+  "title": "Honeybees visit millions of flowers for a jar of honey",
+  "body": "Making a single jar of honey can take bees around two million flower visits.",
+  "hook": "Small efforts add up to sweet results."
+ },
+ {
+  "id": "nat-040",
+  "topic": "nature",
+  "title": "Male lions sleep up to 20 hours a day",
+  "body": "Lions save energy by resting most of the day. Hunting is short and intense.",
+  "hook": "Rest is part of the strategy."
+ },
+ {
+  "id": "nat-041",
+  "topic": "nature",
+  "title": "Coral reefs are built by tiny animals",
+  "body": "Coral polyps build hard skeletons of calcium carbonate. Over thousands of years, they create reefs.",
+  "hook": "Tiny builders can make huge structures."
+ },
+ {
+  "id": "nat-042",
+  "topic": "nature",
+  "title": "Some birds use tools",
+  "body": "New Caledonian crows shape twigs and leaves into hooks to pull insects from holes.",
+  "hook": "Tool use is not unique to humans."
+ },
+ {
+  "id": "nat-043",
+  "topic": "nature",
+  "title": "Moles can dig fast",
+  "body": "A mole can dig several metres of tunnel in an hour. Its front paws are broad and powerful like shovels.",
+  "hook": "Bodies are tools for a lifestyle."
+ },
+ {
+  "id": "nat-044",
+  "topic": "nature",
+  "title": "Pandas spend most of the day eating",
+  "body": "Giant pandas eat bamboo for around 10 to 16 hours a day. Bamboo is low in nutrients, so they need a lot.",
+  "hook": "Diet shapes daily routine."
+ },
+ {
+  "id": "nat-045",
+  "topic": "nature",
+  "title": "Earthworms improve soil",
+  "body": "Earthworms mix soil and leave nutrient-rich casts. Charles Darwin spent years studying their importance.",
+  "hook": "Small creatures can have big impacts."
+ },
+ {
+  "id": "nat-046",
+  "topic": "nature",
+  "title": "Some fish can climb waterfalls",
+  "body": "Certain Hawaiian gobies use suction-cup fins to climb high waterfalls to reach upstream habitats.",
+  "hook": "Determination is not just human."
+ },
+ {
+  "id": "nat-047",
+  "topic": "nature",
+  "title": "Deer grow new antlers each year",
+  "body": "Male deer shed their antlers annually and grow a new set. Growing antler is among the fastest-growing animal tissue.",
+  "hook": "Renewal can be built into life cycles."
+ },
+ {
+  "id": "nat-048",
+  "topic": "nature",
+  "title": "The largest living thing may be a fungus",
+  "body": "A honey fungus in Oregon spreads underground across nearly 10 square kilometres. It may be thousands of years old.",
+  "hook": "The biggest things can be hidden."
+ },
+ {
+  "id": "nat-049",
+  "topic": "nature",
+  "title": "Bats are the only mammals that truly fly",
+  "body": "Some mammals glide, but bats are the only ones capable of powered flight. Their wings are stretched skin over long fingers.",
+  "hook": "Evolution found a unique solution."
+ },
+ {
+  "id": "nat-050",
+  "topic": "nature",
+  "title": "Chameleons change colour mainly to communicate",
+  "body": "Colour changes often signal mood or territory rather than camouflage. They also help with temperature control.",
+  "hook": "The obvious explanation is not always right."
+ },
+ {
+  "id": "nat-051",
+  "topic": "nature",
+  "title": "Ducks have waterproof feathers",
+  "body": "Ducks spread oil from a gland near their tails over their feathers. Tightly interlocking feathers also help keep water out.",
+  "hook": "Maintenance keeps systems working."
+ },
+ {
+  "id": "nat-052",
+  "topic": "nature",
+  "title": "Some plants can sense touch",
+  "body": "The sensitive plant Mimosa pudica folds its leaves when touched. It may deter grazing animals.",
+  "hook": "Plants are more responsive than they seem."
+ },
+ {
+  "id": "nat-053",
+  "topic": "nature",
+  "title": "Owls fly almost silently",
+  "body": "Special feather edges break up turbulence, letting owls approach prey with very little sound.",
+  "hook": "Quiet design wins."
+ },
+ {
+  "id": "nat-054",
+  "topic": "nature",
+  "title": "Goldfish have better memories than the myth",
+  "body": "The \"three-second memory\" is a myth. Studies show goldfish can remember things for months.",
+  "hook": "Popular sayings can be wrong."
+ },
+ {
+  "id": "nat-055",
+  "topic": "nature",
+  "title": "Pigs are very intelligent",
+  "body": "Pigs can learn tricks, solve puzzles and recognise individuals. Some studies compare them to dogs.",
+  "hook": "Intelligence is widespread among animals."
+ },
+ {
+  "id": "nat-056",
+  "topic": "nature",
+  "title": "Zebras' stripes may deter flies",
+  "body": "Research suggests stripes confuse biting flies, making them less likely to land.",
+  "hook": "Patterns can be practical."
+ },
+ {
+  "id": "nat-057",
+  "topic": "nature",
+  "title": "A blue whale calf gains around 90 kilograms a day",
+  "body": "Blue whale calves drink rich milk and grow very fast in their first months.",
+  "hook": "Growth can be astonishing early on."
+ },
+ {
+  "id": "nat-058",
+  "topic": "nature",
+  "title": "Spider silk is extremely strong for its weight",
+  "body": "Some spider silk is stronger than steel of the same thickness and very stretchy.",
+  "hook": "Nature makes high-performance materials."
+ },
+ {
+  "id": "nat-059",
+  "topic": "nature",
+  "title": "Some trees communicate danger with chemicals",
+  "body": "When attacked by insects, some trees release chemicals that may prompt nearby trees to boost their defences.",
+  "hook": "Signals can travel through air."
+ },
+ {
+  "id": "nat-060",
+  "topic": "nature",
+  "title": "Axolotls can regrow limbs",
+  "body": "These Mexican salamanders can regenerate limbs, parts of the heart and even parts of the brain.",
+  "hook": "Regeneration is a scientific puzzle."
+ },
+ {
+  "id": "nat-061",
+  "topic": "nature",
+  "title": "Frogs drink through their skin",
+  "body": "Most frogs absorb water through a patch of skin on their belly rather than drinking with their mouths.",
+  "hook": "Bodies solve problems differently."
+ },
+ {
+  "id": "nat-062",
+  "topic": "nature",
+  "title": "Peacock feathers get their colour from structure",
+  "body": "The shimmering colours come from microscopic structures that reflect light, not pigments.",
+  "hook": "Colour can be built, not dyed."
+ },
+ {
+  "id": "nat-063",
+  "topic": "nature",
+  "title": "Sea turtles return to the beach where they hatched",
+  "body": "Female sea turtles often return to nest near where they were born, possibly guided by Earth's magnetic field.",
+  "hook": "Some journeys come full circle."
+ },
+ {
+  "id": "nat-064",
+  "topic": "nature",
+  "title": "Camels store fat, not water, in their humps",
+  "body": "The hump stores fat for energy. Camels survive without water by conserving it efficiently.",
+  "hook": "Myths often get the mechanism wrong."
+ },
+ {
+  "id": "nat-065",
+  "topic": "nature",
+  "title": "Horses cannot vomit",
+  "body": "A strong muscle at the entrance to a horse's stomach makes vomiting nearly impossible.",
+  "hook": "Some bodies have one-way systems."
+ },
+ {
+  "id": "nat-066",
+  "topic": "nature",
+  "title": "The mantis shrimp packs a fast punch",
+  "body": "Its club-like limbs strike so fast they create bubbles that collapse with tiny shock waves. It can crack shells and glass.",
+  "hook": "Speed is power."
+ },
+ {
+  "id": "nat-067",
+  "topic": "nature",
+  "title": "Crows can hold grudges",
+  "body": "Studies found crows remember faces of people who threatened them and warn others.",
+  "hook": "Memory makes social animals smarter."
+ },
+ {
+  "id": "nat-068",
+  "topic": "nature",
+  "title": "Bees can recognise human faces, some studies suggest",
+  "body": "Experiments indicate honeybees can learn to tell apart images of faces.",
+  "hook": "Even tiny brains can learn patterns."
+ },
+ {
+  "id": "nat-069",
+  "topic": "nature",
+  "title": "Dragonflies are expert hunters",
+  "body": "Dragonflies catch a very high share of prey they chase, among the most successful hunters known.",
+  "hook": "Precision beats power."
+ },
+ {
+  "id": "nat-070",
+  "topic": "nature",
+  "title": "Flamingos stand on one leg to save energy",
+  "body": "Studies suggest standing on one leg takes less muscle effort for flamingos and may reduce heat loss.",
+  "hook": "Strange postures can be efficient."
+ },
+ {
+  "id": "nat-071",
+  "topic": "nature",
+  "title": "Male emperor penguins incubate eggs",
+  "body": "Males balance eggs on their feet under a fold of skin through the Antarctic winter, fasting for weeks.",
+  "hook": "Endurance can be parenting."
+ },
+ {
+  "id": "nat-072",
+  "topic": "nature",
+  "title": "Some caterpillars mimic snakes",
+  "body": "Certain caterpillars have markings that look like snake eyes, scaring off birds.",
+  "hook": "Bluffing is a survival tactic."
+ },
+ {
+  "id": "nat-073",
+  "topic": "nature",
+  "title": "Orcas are dolphins",
+  "body": "Killer whales are the largest members of the dolphin family. They live in complex social groups.",
+  "hook": "Names can hide family ties."
+ },
+ {
+  "id": "nat-074",
+  "topic": "nature",
+  "title": "Grass grows from the base",
+  "body": "Grass grows from near the ground, not the tips. That is why it survives grazing and mowing.",
+  "hook": "Where you grow from determines how you recover."
+ },
+ {
+  "id": "nat-075",
+  "topic": "nature",
+  "title": "Raccoons wash food, or seem to",
+  "body": "Raccoons often dunk food in water. Scientists think it may heighten their sense of touch rather than clean it.",
+  "hook": "Behaviour can have unexpected purposes."
+ },
+ {
+  "id": "nat-076",
+  "topic": "nature",
+  "title": "Hummingbirds can fly backwards",
+  "body": "Their wings rotate at the shoulder, letting them hover and fly in any direction, including backwards.",
+  "hook": "Flexibility opens new moves."
+ },
+ {
+  "id": "nat-077",
+  "topic": "nature",
+  "title": "Sunflowers follow the Sun when young",
+  "body": "Young sunflowers track the Sun from east to west. Mature flowers usually face east.",
+  "hook": "Behaviour can change with age."
+ },
+ {
+  "id": "nat-078",
+  "topic": "nature",
+  "title": "Cuttlefish can change texture as well as colour",
+  "body": "They can alter skin colour and surface texture in moments to blend into surroundings.",
+  "hook": "Disguise can be multi-dimensional."
+ },
+ {
+  "id": "nat-079",
+  "topic": "nature",
+  "title": "The platypus lays eggs",
+  "body": "The platypus is one of the few mammals that lays eggs. It also detects prey using electrical signals.",
+  "hook": "Nature breaks its own rules."
+ },
+ {
+  "id": "nat-080",
+  "topic": "nature",
+  "title": "Some ants farm fungus",
+  "body": "Leafcutter ants cut leaves to feed fungus gardens, which they then eat. They have farmed for millions of years.",
+  "hook": "Agriculture is older than humans."
+ },
+ {
+  "id": "nat-081",
+  "topic": "nature",
+  "title": "Rainforests cover a small share of land",
+  "body": "Tropical rainforests cover around 6 percent of Earth's land but hold a large share of its species.",
+  "hook": "Small areas can hold great riches."
+ },
+ {
+  "id": "nat-082",
+  "topic": "nature",
+  "title": "Koalas have fingerprints like humans",
+  "body": "Koala fingerprints are so similar to ours that they can be hard to tell apart under a microscope.",
+  "hook": "Evolution can repeat itself."
+ },
+ {
+  "id": "nat-083",
+  "topic": "nature",
+  "title": "Some octopuses use coconut shells as shelter",
+  "body": "Veined octopuses carry coconut halves and assemble them into shelters when needed.",
+  "hook": "Planning ahead is not unique to us."
+ },
+ {
+  "id": "nat-084",
+  "topic": "nature",
+  "title": "Snakes smell with their tongues",
+  "body": "A snake flicks its tongue to collect scent particles and passes them to an organ in the roof of its mouth.",
+  "hook": "Senses can be repurposed."
  },
  {
   "id": "spa-001",
@@ -875,6 +2527,419 @@
   "hook": "Seasons come from tilt, not distance."
  },
  {
+  "id": "spa-026",
+  "topic": "space",
+  "title": "The Moon has moonquakes",
+  "body": "Seismometers left by Apollo astronauts recorded quakes on the Moon. Some shallow ones lasted for minutes.",
+  "hook": "Even quiet worlds can shake."
+ },
+ {
+  "id": "spa-027",
+  "topic": "space",
+  "title": "There are more trees on Earth than stars in the Milky Way",
+  "body": "Estimates put Earth's trees at around 3 trillion. The Milky Way holds roughly 100 to 400 billion stars.",
+  "hook": "Our planet holds its own vast numbers."
+ },
+ {
+  "id": "spa-028",
+  "topic": "space",
+  "title": "Uranus spins on its side",
+  "body": "Uranus is tilted about 98 degrees, so it rolls around the Sun. Each pole gets around 42 years of continuous sunlight.",
+  "hook": "A single collision can change a planet forever."
+ },
+ {
+  "id": "spa-029",
+  "topic": "space",
+  "title": "The Sun is a middle-aged star",
+  "body": "The Sun is about 4.6 billion years old. It is expected to shine for roughly another 5 billion years.",
+  "hook": "Our star is only halfway through its story."
+ },
+ {
+  "id": "spa-030",
+  "topic": "space",
+  "title": "Comets have two tails",
+  "body": "A comet often has a curved dust tail and a straight ion tail. The ion tail always points away from the Sun.",
+  "hook": "Solar wind shapes what we see."
+ },
+ {
+  "id": "spa-031",
+  "topic": "space",
+  "title": "The Moon always shows the same face",
+  "body": "The Moon spins once for every orbit of Earth, so the same side always faces us. This is called tidal locking.",
+  "hook": "Gravity can sync rhythms."
+ },
+ {
+  "id": "spa-032",
+  "topic": "space",
+  "title": "The far side of the Moon is not dark",
+  "body": "It gets as much sunlight as the near side. It was simply unseen until a Soviet probe photographed it in 1959.",
+  "hook": "Hidden is not the same as dark."
+ },
+ {
+  "id": "spa-033",
+  "topic": "space",
+  "title": "Space smells, according to astronauts",
+  "body": "Astronauts have described a smell like seared steak or hot metal on their suits after spacewalks.",
+  "hook": "Space has a scent, even without air."
+ },
+ {
+  "id": "spa-034",
+  "topic": "space",
+  "title": "Mars has two small moons",
+  "body": "Phobos and Deimos are small and irregular. Phobos is slowly spiralling inwards and may break apart in tens of millions of years.",
+  "hook": "Even moons have lifespans."
+ },
+ {
+  "id": "spa-035",
+  "topic": "space",
+  "title": "The Milky Way will merge with Andromeda",
+  "body": "In about 4 to 5 billion years, our galaxy and Andromeda are expected to collide and merge. Stars are so far apart they rarely hit each other.",
+  "hook": "Even collisions can be peaceful at scale."
+ },
+ {
+  "id": "spa-036",
+  "topic": "space",
+  "title": "Jupiter has the most massive moon system",
+  "body": "Jupiter's moon Ganymede is the largest moon in the solar system, bigger than Mercury.",
+  "hook": "Some moons outsize planets."
+ },
+ {
+  "id": "spa-037",
+  "topic": "space",
+  "title": "Saturn's rings are mostly ice",
+  "body": "The rings are made largely of water ice chunks, from tiny grains to boulders. They are very wide but often only tens of metres thick.",
+  "hook": "Huge structures can be incredibly thin."
+ },
+ {
+  "id": "spa-038",
+  "topic": "space",
+  "title": "A light year measures distance, not time",
+  "body": "It is the distance light travels in a year, about 9.5 trillion kilometres.",
+  "hook": "Some words trick us with their names."
+ },
+ {
+  "id": "spa-039",
+  "topic": "space",
+  "title": "The first animal in orbit was a dog",
+  "body": "Laika orbited Earth aboard Sputnik 2 in 1957. She did not survive the mission.",
+  "hook": "Progress has had real costs."
+ },
+ {
+  "id": "spa-040",
+  "topic": "space",
+  "title": "Astronauts lose bone mass in space",
+  "body": "Without gravity, bones lose density. Astronauts exercise for about two hours a day to limit the loss.",
+  "hook": "Gravity keeps us strong."
+ },
+ {
+  "id": "spa-041",
+  "topic": "space",
+  "title": "Venus is the hottest planet",
+  "body": "Its thick carbon dioxide atmosphere traps heat, keeping surface temperatures around 465°C.",
+  "hook": "Atmosphere can matter more than distance."
+ },
+ {
+  "id": "spa-042",
+  "topic": "space",
+  "title": "Mercury has ice",
+  "body": "Despite being closest to the Sun, Mercury may have water ice in shadowed craters at its poles.",
+  "hook": "Extremes can sit side by side."
+ },
+ {
+  "id": "spa-043",
+  "topic": "space",
+  "title": "The Sun is mostly hydrogen",
+  "body": "By mass, the Sun is about 73 percent hydrogen and 25 percent helium, with traces of other elements.",
+  "hook": "Stars are built from the simplest stuff."
+ },
+ {
+  "id": "spa-044",
+  "topic": "space",
+  "title": "There may be a planet with diamond rain",
+  "body": "Scientists think the extreme pressures inside Neptune and Uranus may turn carbon into diamonds that sink like rain.",
+  "hook": "Weather can be stranger than fiction."
+ },
+ {
+  "id": "spa-045",
+  "topic": "space",
+  "title": "Shooting stars are tiny",
+  "body": "Most meteors are grains of dust or sand that burn up in the atmosphere. They glow because they hit the air at huge speed.",
+  "hook": "Small things can make big displays."
+ },
+ {
+  "id": "spa-046",
+  "topic": "space",
+  "title": "Earth gets heavier from space dust",
+  "body": "Tens of thousands of tonnes of cosmic dust fall on Earth every year.",
+  "hook": "The sky is always falling, slowly."
+ },
+ {
+  "id": "spa-047",
+  "topic": "space",
+  "title": "Pluto has a heart",
+  "body": "NASA's New Horizons spacecraft found a huge heart-shaped region of nitrogen ice on Pluto in 2015.",
+  "hook": "Distant worlds can surprise us."
+ },
+ {
+  "id": "spa-048",
+  "topic": "space",
+  "title": "Olympus Mons would be hard to see from its base",
+  "body": "It is so broad that its slopes curve away over the horizon. From the base you could not see the summit.",
+  "hook": "Scale can make giants invisible."
+ },
+ {
+  "id": "spa-049",
+  "topic": "space",
+  "title": "The ISS is visible from the ground",
+  "body": "The International Space Station often looks like a bright, steady star moving across the sky.",
+  "hook": "You can watch people living in space."
+ },
+ {
+  "id": "spa-050",
+  "topic": "space",
+  "title": "There is no up or down in space",
+  "body": "In orbit, astronauts float freely and arrange equipment on every surface.",
+  "hook": "Orientation is just a convention."
+ },
+ {
+  "id": "spa-051",
+  "topic": "space",
+  "title": "The Sun's light is white",
+  "body": "The Sun gives off all colours of visible light, which combine to white. It looks yellow because of our atmosphere.",
+  "hook": "The sky changes how we see."
+ },
+ {
+  "id": "spa-052",
+  "topic": "space",
+  "title": "Mars has seasons",
+  "body": "Mars is tilted like Earth, so it has seasons. They last about twice as long because its year is longer.",
+  "hook": "Familiar patterns appear on other worlds."
+ },
+ {
+  "id": "spa-053",
+  "topic": "space",
+  "title": "Europa may have an ocean",
+  "body": "Jupiter's moon Europa is thought to have a salty ocean beneath its icy crust. It is a target in the search for life.",
+  "hook": "Life may hide under ice."
+ },
+ {
+  "id": "spa-054",
+  "topic": "space",
+  "title": "The asteroid belt is mostly empty",
+  "body": "Asteroids are far apart, often hundreds of thousands of kilometres. Spacecraft fly through without trouble.",
+  "hook": "Sci-fi crowds space too much."
+ },
+ {
+  "id": "spa-055",
+  "topic": "space",
+  "title": "A spacesuit is like a personal spacecraft",
+  "body": "It provides oxygen, pressure, temperature control and protection from radiation and dust.",
+  "hook": "Survival needs a lot of kit."
+ },
+ {
+  "id": "spa-056",
+  "topic": "space",
+  "title": "We have only seen one side of the Milky Way",
+  "body": "Because we are inside it, we cannot photograph the whole galaxy. Pictures of it are illustrations or other galaxies.",
+  "hook": "Some views are impossible from inside."
+ },
+ {
+  "id": "spa-057",
+  "topic": "space",
+  "title": "Solar eclipses happen by coincidence",
+  "body": "The Sun is about 400 times wider than the Moon but also about 400 times further away. So they look the same size.",
+  "hook": "A cosmic coincidence gives us eclipses."
+ },
+ {
+  "id": "spa-058",
+  "topic": "space",
+  "title": "Saturn's moon Titan has lakes",
+  "body": "Titan has lakes and rivers of liquid methane and ethane. It also has rain and a thick atmosphere.",
+  "hook": "Familiar landscapes can form from alien stuff."
+ },
+ {
+  "id": "spa-059",
+  "topic": "space",
+  "title": "The first person in space was Yuri Gagarin",
+  "body": "On 12 April 1961, Gagarin orbited Earth once in Vostok 1. The flight lasted about 108 minutes.",
+  "hook": "One orbit changed the world."
+ },
+ {
+  "id": "spa-060",
+  "topic": "space",
+  "title": "Twelve people have walked on the Moon",
+  "body": "Between 1969 and 1972, twelve astronauts walked on the Moon during six Apollo missions.",
+  "hook": "A small club with a giant achievement."
+ },
+ {
+  "id": "spa-061",
+  "topic": "space",
+  "title": "Space is cold, but not everywhere",
+  "body": "In shadow, objects can get extremely cold. In direct sunlight they can get very hot, so spacecraft need thermal control.",
+  "hook": "Extremes depend on where you stand."
+ },
+ {
+  "id": "spa-062",
+  "topic": "space",
+  "title": "The Andromeda galaxy is visible without a telescope",
+  "body": "On a dark night it looks like a faint smudge. It is about 2.5 million light years away.",
+  "hook": "You can see another galaxy with your own eyes."
+ },
+ {
+  "id": "spa-063",
+  "topic": "space",
+  "title": "The Moon makes Earth's tides",
+  "body": "The Moon's gravity pulls on the oceans, creating bulges. The Sun contributes too, making spring and neap tides.",
+  "hook": "Distant objects shape our daily lives."
+ },
+ {
+  "id": "spa-064",
+  "topic": "space",
+  "title": "Earth's magnetic field protects us",
+  "body": "It deflects much of the solar wind. Without it, our atmosphere could slowly be stripped away.",
+  "hook": "Invisible shields matter."
+ },
+ {
+  "id": "spa-065",
+  "topic": "space",
+  "title": "Auroras are caused by the solar wind",
+  "body": "Charged particles from the Sun collide with gases in the upper atmosphere, making the sky glow.",
+  "hook": "Space weather paints the sky."
+ },
+ {
+  "id": "spa-066",
+  "topic": "space",
+  "title": "Black holes can spin",
+  "body": "Many black holes rotate, some at close to the maximum possible speed. Spin affects how matter falls in.",
+  "hook": "Even the darkest objects move."
+ },
+ {
+  "id": "spa-067",
+  "topic": "space",
+  "title": "The Kármán line marks where space begins",
+  "body": "It is commonly set at 100 kilometres above sea level. Some organisations use 80 kilometres instead.",
+  "hook": "Boundaries are often agreed, not natural."
+ },
+ {
+  "id": "spa-068",
+  "topic": "space",
+  "title": "Space junk is a growing problem",
+  "body": "Thousands of defunct satellites and fragments orbit Earth. Collisions can create more debris.",
+  "hook": "Every launch leaves a trace."
+ },
+ {
+  "id": "spa-069",
+  "topic": "space",
+  "title": "The first image of a black hole came in 2019",
+  "body": "The Event Horizon Telescope linked telescopes worldwide to image the black hole in galaxy M87.",
+  "hook": "Teamwork can see the invisible."
+ },
+ {
+  "id": "spa-070",
+  "topic": "space",
+  "title": "Hubble has been in orbit since 1990",
+  "body": "The Hubble Space Telescope has made over a million observations. It was repaired by astronauts several times.",
+  "hook": "Maintenance can extend a mission for decades."
+ },
+ {
+  "id": "spa-071",
+  "topic": "space",
+  "title": "Light from the Moon is reflected sunlight",
+  "body": "The Moon makes no light of its own. It reflects only around 12 percent of the sunlight that hits it.",
+  "hook": "Even brightness can be borrowed."
+ },
+ {
+  "id": "spa-072",
+  "topic": "space",
+  "title": "A day on Mars is about 24 hours 40 minutes",
+  "body": "A Martian day is called a sol. Rover teams on Earth have worked on Mars time.",
+  "hook": "Some alien rhythms feel familiar."
+ },
+ {
+  "id": "spa-073",
+  "topic": "space",
+  "title": "Stars come in many colours",
+  "body": "Hotter stars look blue-white, cooler ones look red. The Sun is a medium-temperature yellow-white star.",
+  "hook": "Colour reveals temperature."
+ },
+ {
+  "id": "spa-074",
+  "topic": "space",
+  "title": "Jupiter protects Earth, partly",
+  "body": "Its gravity can deflect some comets and asteroids, though it can also send others towards the inner solar system.",
+  "hook": "Big neighbours have mixed effects."
+ },
+ {
+  "id": "spa-075",
+  "topic": "space",
+  "title": "Most of the universe is invisible",
+  "body": "Ordinary matter makes up only about 5 percent of the universe. The rest is dark matter and dark energy.",
+  "hook": "We understand only a small slice."
+ },
+ {
+  "id": "spa-076",
+  "topic": "space",
+  "title": "Space has a speed record holder",
+  "body": "NASA's Parker Solar Probe became the fastest human-made object, travelling hundreds of thousands of kilometres per hour near the Sun.",
+  "hook": "Gravity can be a slingshot."
+ },
+ {
+  "id": "spa-077",
+  "topic": "space",
+  "title": "The Moon formed from a collision, most likely",
+  "body": "The leading theory says a Mars-sized body hit early Earth, and debris formed the Moon.",
+  "hook": "Violent beginnings can create beauty."
+ },
+ {
+  "id": "spa-078",
+  "topic": "space",
+  "title": "Spacecraft use gravity assists",
+  "body": "Probes swing past planets to gain speed and change direction without extra fuel.",
+  "hook": "Clever paths save energy."
+ },
+ {
+  "id": "spa-079",
+  "topic": "space",
+  "title": "Galaxies come in shapes",
+  "body": "Astronomers classify galaxies as spiral, elliptical or irregular. The Milky Way is a barred spiral.",
+  "hook": "Patterns help us understand the vast."
+ },
+ {
+  "id": "spa-080",
+  "topic": "space",
+  "title": "The Sun loses mass every second",
+  "body": "Through fusion and solar wind, the Sun loses millions of tonnes of mass each second. It has plenty to spare.",
+  "hook": "Even giants spend."
+ },
+ {
+  "id": "spa-081",
+  "topic": "space",
+  "title": "Astronauts' voices sound normal inside the station",
+  "body": "The ISS is filled with air, so sound travels as normal. Only in the vacuum outside is there silence.",
+  "hook": "Silence needs a vacuum."
+ },
+ {
+  "id": "spa-082",
+  "topic": "space",
+  "title": "Exoplanets number in the thousands",
+  "body": "Over 5,000 planets outside our solar system have been confirmed. Many more are likely.",
+  "hook": "Planets are common."
+ },
+ {
+  "id": "spa-083",
+  "topic": "space",
+  "title": "Venus has no moons",
+  "body": "Venus and Mercury are the only planets in our solar system without moons.",
+  "hook": "Not every planet has company."
+ },
+ {
+  "id": "spa-084",
+  "topic": "space",
+  "title": "The Great Bear is not a constellation's full story",
+  "body": "The Plough, or Big Dipper, is part of the larger constellation Ursa Major, the Great Bear.",
+  "hook": "Familiar shapes can be pieces of bigger pictures."
+ },
+ {
   "id": "lan-001",
   "topic": "language",
   "title": "\"Salary\" may come from salt",
@@ -1048,5 +3113,418 @@
   "title": "Mandarin uses tones to change meaning",
   "body": "In Mandarin, the syllable \"ma\" can mean mother, hemp, horse or scold, depending on its tone. There are four main tones plus a neutral one.",
   "hook": "Pitch can carry meaning."
+ },
+ {
+  "id": "lan-026",
+  "topic": "language",
+  "title": "\"Lord\" once meant loaf-keeper",
+  "body": "It comes from the Old English \"hlafweard\", meaning guardian of the loaf. \"Lady\" comes from \"hlæfdige\", loaf-kneader.",
+  "hook": "Power once meant controlling the bread."
+ },
+ {
+  "id": "lan-027",
+  "topic": "language",
+  "title": "\"Bankrupt\" comes from a broken bench",
+  "body": "It is linked to the Italian \"banca rotta\", meaning broken bench. Moneylenders worked at benches, and a broken one signalled failure.",
+  "hook": "Business failure has a vivid history."
+ },
+ {
+  "id": "lan-028",
+  "topic": "language",
+  "title": "\"Bedlam\" comes from a hospital",
+  "body": "Bethlem Royal Hospital in London, a psychiatric hospital, was nicknamed Bedlam. The word came to mean chaos.",
+  "hook": "Place names can turn into everyday words."
+ },
+ {
+  "id": "lan-029",
+  "topic": "language",
+  "title": "\"Sincere\" might mean without wax",
+  "body": "A popular story says it means \"without wax\", from sculptors hiding flaws. Most scholars trace it to Latin \"sincerus\", meaning pure.",
+  "hook": "Charming etymologies are often wrong."
+ },
+ {
+  "id": "lan-030",
+  "topic": "language",
+  "title": "\"Tragedy\" may mean goat song",
+  "body": "It comes from the Greek \"tragōidia\", possibly from \"tragos\", goat, and \"ōidē\", song. Why goats is still debated.",
+  "hook": "Some origins remain mysterious."
+ },
+ {
+  "id": "lan-031",
+  "topic": "language",
+  "title": "\"Window\" means wind eye",
+  "body": "It comes from the Old Norse \"vindauga\", combining wind and eye.",
+  "hook": "Words can be little poems."
+ },
+ {
+  "id": "lan-032",
+  "topic": "language",
+  "title": "\"Nightmare\" involves a goblin, not a horse",
+  "body": "The \"mare\" in nightmare comes from an Old English word for a spirit that sat on sleepers' chests.",
+  "hook": "Similar sounds can hide different meanings."
+ },
+ {
+  "id": "lan-033",
+  "topic": "language",
+  "title": "\"Daisy\" means day's eye",
+  "body": "It comes from Old English \"dægesēage\", because the flower opens in the morning and closes at night.",
+  "hook": "Names can describe behaviour."
+ },
+ {
+  "id": "lan-034",
+  "topic": "language",
+  "title": "\"Pupil\" means little doll",
+  "body": "The pupil of the eye comes from Latin \"pupilla\", little doll, after the tiny reflection you see of yourself in someone's eye.",
+  "hook": "Small observations shape words."
+ },
+ {
+  "id": "lan-035",
+  "topic": "language",
+  "title": "\"Companion\" means bread-sharer",
+  "body": "From Latin \"com\", with, and \"panis\", bread. A companion is someone you share bread with.",
+  "hook": "Friendship begins at the table."
+ },
+ {
+  "id": "lan-036",
+  "topic": "language",
+  "title": "\"Sarcasm\" means to tear flesh",
+  "body": "It comes from the Greek \"sarkazein\", to tear flesh, later meaning to sneer.",
+  "hook": "Words can bite."
+ },
+ {
+  "id": "lan-037",
+  "topic": "language",
+  "title": "\"Hello\" became popular with the telephone",
+  "body": "Thomas Edison is credited with promoting \"hello\" as a telephone greeting. Alexander Graham Bell preferred \"ahoy\".",
+  "hook": "Technology can choose our words."
+ },
+ {
+  "id": "lan-038",
+  "topic": "language",
+  "title": "\"Emoji\" is not related to emotion",
+  "body": "It comes from Japanese \"e\", picture, and \"moji\", character. The resemblance to \"emotion\" is a coincidence.",
+  "hook": "Coincidences shape how words feel."
+ },
+ {
+  "id": "lan-039",
+  "topic": "language",
+  "title": "\"Panic\" comes from the god Pan",
+  "body": "Pan was a Greek god of the wild, said to cause sudden fear in travellers.",
+  "hook": "Gods live on in our vocabulary."
+ },
+ {
+  "id": "lan-040",
+  "topic": "language",
+  "title": "\"Cereal\" comes from a goddess",
+  "body": "It comes from Ceres, the Roman goddess of agriculture and grain.",
+  "hook": "Breakfast has divine origins."
+ },
+ {
+  "id": "lan-041",
+  "topic": "language",
+  "title": "\"Jeans\" may come from Genoa",
+  "body": "The cloth is linked to Genoa in Italy, called \"Gênes\" in French. Denim comes from \"de Nîmes\", a French town.",
+  "hook": "Clothes carry place names."
+ },
+ {
+  "id": "lan-042",
+  "topic": "language",
+  "title": "\"Tuxedo\" comes from a place",
+  "body": "It is named after Tuxedo Park, New York, where the jacket became fashionable in the 1880s.",
+  "hook": "Fashion travels with names."
+ },
+ {
+  "id": "lan-043",
+  "topic": "language",
+  "title": "\"Quiz\" has a disputed origin",
+  "body": "A famous story says it was invented for a bet in Dublin. Historians find no evidence and the real origin is unclear.",
+  "hook": "Some origin stories are too good to be true."
+ },
+ {
+  "id": "lan-044",
+  "topic": "language",
+  "title": "\"Silly\" once meant blessed",
+  "body": "In Old English, \"sælig\" meant happy or blessed. Over centuries it shifted to innocent, then foolish.",
+  "hook": "Meanings can drift a long way."
+ },
+ {
+  "id": "lan-045",
+  "topic": "language",
+  "title": "\"Awful\" once meant full of awe",
+  "body": "It originally meant inspiring wonder or fear. It now usually means very bad.",
+  "hook": "Words can lose their sparkle."
+ },
+ {
+  "id": "lan-046",
+  "topic": "language",
+  "title": "\"Mortgage\" means death pledge",
+  "body": "It comes from Old French \"mort\", dead, and \"gage\", pledge. The pledge dies when the debt is paid or the property is taken.",
+  "hook": "Finance has gloomy roots."
+ },
+ {
+  "id": "lan-047",
+  "topic": "language",
+  "title": "\"Girl\" once meant any young person",
+  "body": "In Middle English, \"gyrle\" could refer to a young person of either sex.",
+  "hook": "Words can narrow over time."
+ },
+ {
+  "id": "lan-048",
+  "topic": "language",
+  "title": "\"Pedigree\" comes from a crane's foot",
+  "body": "It comes from French \"pied de grue\", crane's foot, because family tree lines looked like a bird's foot.",
+  "hook": "Diagrams can name ideas."
+ },
+ {
+  "id": "lan-049",
+  "topic": "language",
+  "title": "\"Algebra\" comes from Arabic",
+  "body": "It comes from \"al-jabr\", from the title of a 9th-century book by the mathematician al-Khwarizmi.",
+  "hook": "Maths carries history in its words."
+ },
+ {
+  "id": "lan-050",
+  "topic": "language",
+  "title": "\"Algorithm\" comes from a person's name",
+  "body": "It derives from al-Khwarizmi, whose name was Latinised as Algoritmi.",
+  "hook": "People can become concepts."
+ },
+ {
+  "id": "lan-051",
+  "topic": "language",
+  "title": "\"Checkmate\" means the king is helpless",
+  "body": "It comes from Persian \"shāh māt\", often translated as \"the king is helpless\" or \"the king is stuck\".",
+  "hook": "Games carry language across continents."
+ },
+ {
+  "id": "lan-052",
+  "topic": "language",
+  "title": "\"Hippopotamus\" means river horse",
+  "body": "It comes from the Greek \"hippos\", horse, and \"potamos\", river.",
+  "hook": "Names can be descriptions."
+ },
+ {
+  "id": "lan-053",
+  "topic": "language",
+  "title": "\"Pineapple\" once meant pine cone",
+  "body": "In English, \"pineapple\" first meant a pine cone. The tropical fruit took the name because of its resemblance.",
+  "hook": "Names get recycled."
+ },
+ {
+  "id": "lan-054",
+  "topic": "language",
+  "title": "\"Coffee\" travelled through many languages",
+  "body": "It came via Dutch \"koffie\" from Turkish \"kahve\", from Arabic \"qahwa\".",
+  "hook": "A word can journey as far as the bean."
+ },
+ {
+  "id": "lan-055",
+  "topic": "language",
+  "title": "\"Ketchup\" spellings once varied",
+  "body": "Catsup and catchup were common spellings. Ketchup became standard over the 20th century.",
+  "hook": "Spelling can be settled by markets."
+ },
+ {
+  "id": "lan-056",
+  "topic": "language",
+  "title": "\"Serendipity\" comes from a fairy tale",
+  "body": "Horace Walpole coined it in 1754, after the Persian tale The Three Princes of Serendip.",
+  "hook": "Lucky discoveries got a lucky name."
+ },
+ {
+  "id": "lan-057",
+  "topic": "language",
+  "title": "\"Nerd\" may come from Dr Seuss",
+  "body": "The word appears in Dr Seuss's 1950 book If I Ran the Zoo. Its later slang use spread from the US.",
+  "hook": "Children's books can coin words."
+ },
+ {
+  "id": "lan-058",
+  "topic": "language",
+  "title": "\"Gaslighting\" comes from a play",
+  "body": "It comes from the 1938 play Gas Light and its film versions, where a husband manipulates his wife.",
+  "hook": "Stories give names to experiences."
+ },
+ {
+  "id": "lan-059",
+  "topic": "language",
+  "title": "\"Spam\" email is named after a sketch",
+  "body": "Monty Python's 1970 sketch has a café where Spam is in everything. The repetition inspired the name for junk messages.",
+  "hook": "Comedy names technology."
+ },
+ {
+  "id": "lan-060",
+  "topic": "language",
+  "title": "\"Bluetooth\" is named after a king",
+  "body": "It is named after Harald Bluetooth, a 10th-century Danish king who united tribes, as the technology unites devices.",
+  "hook": "Brands borrow from history."
+ },
+ {
+  "id": "lan-061",
+  "topic": "language",
+  "title": "\"Google\" comes from googol",
+  "body": "A googol is 1 followed by 100 zeros. The company's name is a playful misspelling.",
+  "hook": "A typo can become a giant brand."
+ },
+ {
+  "id": "lan-062",
+  "topic": "language",
+  "title": "\"Lol\" is in the Oxford English Dictionary",
+  "body": "\"LOL\" was added to the OED in 2011. Internet language now shapes mainstream English.",
+  "hook": "Dictionaries follow usage."
+ },
+ {
+  "id": "lan-063",
+  "topic": "language",
+  "title": "English borrows from many languages",
+  "body": "Around 80 percent of English vocabulary is estimated to be borrowed. Latin and French gave large shares.",
+  "hook": "English is a magpie language."
+ },
+ {
+  "id": "lan-064",
+  "topic": "language",
+  "title": "\"Schadenfreude\" has no single English word",
+  "body": "German combines \"Schaden\", harm, and \"Freude\", joy, to mean pleasure at others' misfortune.",
+  "hook": "Some languages name feelings others cannot."
+ },
+ {
+  "id": "lan-065",
+  "topic": "language",
+  "title": "\"Hygge\" became a lifestyle trend",
+  "body": "The Danish word for cosiness and contentment became popular in English around 2016.",
+  "hook": "Words can export a way of life."
+ },
+ {
+  "id": "lan-066",
+  "topic": "language",
+  "title": "The most common letter in English is E",
+  "body": "E appears in English text more than any other letter, around 12 percent of the time.",
+  "hook": "Patterns help codebreakers."
+ },
+ {
+  "id": "lan-067",
+  "topic": "language",
+  "title": "\"Q\" is almost always followed by \"U\"",
+  "body": "In English words, Q is nearly always followed by U. Exceptions often come from other languages, like \"qi\".",
+  "hook": "Rules have exceptions, often borrowed."
+ },
+ {
+  "id": "lan-068",
+  "topic": "language",
+  "title": "Some words are their own opposites",
+  "body": "\"Sanction\" can mean allow or penalise. \"Dust\" can mean remove dust or add it. These are called contronyms.",
+  "hook": "Context decides meaning."
+ },
+ {
+  "id": "lan-069",
+  "topic": "language",
+  "title": "\"Bookkeeper\" has three double letters in a row",
+  "body": "It has oo, kk and ee consecutively. \"Bookkeeping\" does too.",
+  "hook": "Spelling holds puzzles."
+ },
+ {
+  "id": "lan-070",
+  "topic": "language",
+  "title": "\"Strengths\" has one vowel",
+  "body": "The nine-letter word has just one vowel. It is one of the longest English words like that.",
+  "hook": "Consonants can carry a word."
+ },
+ {
+  "id": "lan-071",
+  "topic": "language",
+  "title": "\"Set\" has a huge number of meanings",
+  "body": "The Oxford English Dictionary lists hundreds of senses for \"set\", though \"run\" has overtaken it in some counts.",
+  "hook": "Small words do heavy lifting."
+ },
+ {
+  "id": "lan-072",
+  "topic": "language",
+  "title": "Pangrams use every letter",
+  "body": "\"The quick brown fox jumps over the lazy dog\" contains every letter of the alphabet. It was used to test typewriters.",
+  "hook": "Clever sentences have practical jobs."
+ },
+ {
+  "id": "lan-073",
+  "topic": "language",
+  "title": "The dot-com era gave us new words",
+  "body": "Words like \"email\", \"website\" and \"download\" became everyday English in the 1990s.",
+  "hook": "Technology rapidly reshapes language."
+ },
+ {
+  "id": "lan-074",
+  "topic": "language",
+  "title": "Japanese has three writing systems",
+  "body": "Japanese uses kanji, hiragana and katakana, often together in a single sentence.",
+  "hook": "Writing can mix systems."
+ },
+ {
+  "id": "lan-075",
+  "topic": "language",
+  "title": "Finnish has 15 grammatical cases",
+  "body": "Finnish nouns change form in many ways to express meaning that English shows with prepositions.",
+  "hook": "Grammar takes many forms."
+ },
+ {
+  "id": "lan-076",
+  "topic": "language",
+  "title": "Some languages have no word for blue",
+  "body": "Several languages historically used one word for both blue and green. Linguists call this \"grue\".",
+  "hook": "Colour vocabulary varies widely."
+ },
+ {
+  "id": "lan-077",
+  "topic": "language",
+  "title": "Sign languages are full languages",
+  "body": "British Sign Language and American Sign Language are distinct, each with its own grammar.",
+  "hook": "Language is not only spoken."
+ },
+ {
+  "id": "lan-078",
+  "topic": "language",
+  "title": "The word \"the\" is the most common in English",
+  "body": "\"The\" is the most frequently used word in written English.",
+  "hook": "The smallest words do the most work."
+ },
+ {
+  "id": "lan-079",
+  "topic": "language",
+  "title": "\"Okay\" is one of the most widely understood words",
+  "body": "OK is used and understood in many languages around the world.",
+  "hook": "A joke abbreviation went global."
+ },
+ {
+  "id": "lan-080",
+  "topic": "language",
+  "title": "\"Cockney rhyming slang\" hides meanings",
+  "body": "\"Apples and pears\" means stairs, and often only the first word is used: \"up the apples\".",
+  "hook": "Slang can be a secret code."
+ },
+ {
+  "id": "lan-081",
+  "topic": "language",
+  "title": "\"Avocado\" and \"guacamole\" share a root",
+  "body": "Both trace back to the Nahuatl \"āhuacatl\". Guacamole adds \"mōlli\", meaning sauce.",
+  "hook": "Food words travel together."
+ },
+ {
+  "id": "lan-082",
+  "topic": "language",
+  "title": "\"Trivia\" means three roads",
+  "body": "From Latin \"trivium\", where three roads meet. Gossip at crossroads came to mean small, everyday matters.",
+  "hook": "Small talk has a street address."
+ },
+ {
+  "id": "lan-083",
+  "topic": "language",
+  "title": "\"Ciao\" once meant your servant",
+  "body": "The Italian greeting comes from the Venetian \"s'ciavo\", meaning I am your servant.",
+  "hook": "Politeness can wear down into a casual hello."
+ },
+ {
+  "id": "lan-084",
+  "topic": "language",
+  "title": "\"Curfew\" means cover the fire",
+  "body": "From Old French \"cuevrefeu\", a medieval signal to cover hearth fires for the night.",
+  "hook": "Safety rules leave traces in language."
  }
 ]
