@@ -1,6 +1,8 @@
 // Native-only touches for the iOS app. On the web every function is a no-op or falls back.
 import { Capacitor } from '@capacitor/core'
-import { Haptics, ImpactStyle } from '@capacitor/haptics'
+import { Haptics, ImpactStyle, NotificationType } from '@capacitor/haptics'
+import { SplashScreen } from '@capacitor/splash-screen'
+import { StatusBar, Style } from '@capacitor/status-bar'
 import { LocalNotifications } from '@capacitor/local-notifications'
 import { Share } from '@capacitor/share'
 import { Directory, Filesystem } from '@capacitor/filesystem'
@@ -9,6 +11,27 @@ export const isNative = Capacitor.isNativePlatform()
 
 export function tick() {
   if (isNative) Haptics.impact({ style: ImpactStyle.Light }).catch(() => {})
+}
+
+/** Haptics matched to the moment, as iOS apps use them. No-op on the web. */
+export const haptic = {
+  /** A new card settles into place. */
+  card: () => tick(),
+  /** Switching tab or topic. */
+  select: () => isNative && Haptics.selectionChanged().catch(() => {}),
+  /** Saving a card. */
+  save: () => isNative && Haptics.impact({ style: ImpactStyle.Medium }).catch(() => {}),
+  /** Right answer, day completed. */
+  success: () => isNative && Haptics.notification({ type: NotificationType.Success }).catch(() => {}),
+  /** Wrong answer: a gentle nudge, not an error buzz. */
+  miss: () => isNative && Haptics.notification({ type: NotificationType.Warning }).catch(() => {}),
+}
+
+/** Called once the first screen has painted: light status bar text, then fade the launch screen. */
+export function appReady() {
+  if (!isNative) return
+  StatusBar.setStyle({ style: Style.Dark }).catch(() => {})
+  SplashScreen.hide({ fadeOutDuration: 250 }).catch(() => {})
 }
 
 /** Returns true if shared natively; false means the caller should use the web fallback. */
