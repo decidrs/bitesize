@@ -5,8 +5,8 @@ import { TOPICS, type Card } from './types'
 const cards = deck as Card[]
 
 describe('starter deck', () => {
-  it('has at least 20 cards per topic', () => {
-    for (const t of TOPICS) expect(cards.filter((c) => c.topic === t).length).toBeGreaterThanOrEqual(20)
+  it('has at least 80 cards per topic', () => {
+    for (const t of TOPICS) expect(cards.filter((c) => c.topic === t).length).toBeGreaterThanOrEqual(80)
   })
   it('has unique ids', () => {
     expect(new Set(cards.map((c) => c.id)).size).toBe(cards.length)
