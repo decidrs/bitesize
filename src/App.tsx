@@ -55,9 +55,15 @@ export default function App() {
   const feedRef = useRef<HTMLDivElement>(null)
   const cardCount = useRef(0)
 
+  // Each day's reminder carries the first card of that day's Today's 5, so the lock screen previews it (it can differ if cards are seen meanwhile).
+  const cardFor = useCallback((d: Date) => pickToday(CARDS, seen, dayKey(d))[0], [seen])
+
   useEffect(() => {
-    dailyReminderOn().then(setReminder)
-  }, [])
+    dailyReminderOn().then((on) => {
+      setReminder(on)
+      if (on) setDailyReminder(true, cardFor) // top up the next 14 days
+    })
+  }, [cardFor])
 
   const pool = useMemo(() => {
     if (view.kind === 'saved') return CARDS.filter((c) => saved.has(c.id))
@@ -189,7 +195,7 @@ export default function App() {
           <button
             className={reminder ? 'on' : ''}
             onClick={async () => {
-              const on = await setDailyReminder(!reminder)
+              const on = await setDailyReminder(!reminder, cardFor)
               setReminder(on)
               flash(on ? 'Daily reminder at 8am' : 'Reminder off')
             }}
