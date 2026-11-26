@@ -57,6 +57,8 @@ export default function App() {
   const chipsRef = useRef<HTMLElement>(null)
   const cardCount = useRef(0)
   const lastIdx = useRef(-1)
+  const [active, setActive] = useState(0)
+  const [shown, setShown] = useState<Set<number>>(() => new Set())
   const [firstRun] = useState(() => seen.size < 3)
 
   useEffect(() => {
@@ -95,6 +97,8 @@ export default function App() {
   useEffect(() => {
     setAnswers({})
     lastIdx.current = -1
+    setActive(0)
+    setShown(new Set())
     if (view.kind === 'today') {
       const five = pickToday(CARDS, seen, today())
       setItems([...five.map((card): Item => ({ kind: 'card', card })), { kind: 'done' }])
@@ -132,6 +136,8 @@ export default function App() {
             else haptic.card()
           }
           lastIdx.current = idx
+          setActive(idx)
+          setShown((s) => (s.has(idx) ? s : new Set(s).add(idx)))
           if (el.dataset.kind === 'done') finishDay()
           const id = el.dataset.id
           if (id && !seen.has(id)) {
@@ -198,6 +204,19 @@ export default function App() {
   }
 
   const streakNow = currentStreak(streak, today())
+  // The flame chip gives a little bump whenever the streak grows.
+  const prevStreak = useRef(streakNow)
+  const [bump, setBump] = useState(false)
+  useEffect(() => {
+    if (streakNow > prevStreak.current) {
+      setBump(true)
+      const t = window.setTimeout(() => setBump(false), 700)
+      prevStreak.current = streakNow
+      return () => window.clearTimeout(t)
+    }
+    prevStreak.current = streakNow
+  }, [streakNow])
+  const fx = (i: number) => (shown.has(i) ? 'in' : '')
   const doneToday = streak.last === today()
   const isOn = (v: View) => JSON.stringify(v) === JSON.stringify(view)
 
@@ -206,7 +225,7 @@ export default function App() {
       <nav className="chips" aria-label="Topics" ref={chipsRef}>
         <button className={`today ${isOn({ kind: 'today' }) ? 'on' : ''}`} onClick={() => go({ kind: 'today' })}>
           {doneToday ? '✓ Today' : "Today's 5"}
-          {streakNow > 0 && <span className="flame"> 🔥{streakNow}</span>}
+          {streakNow > 0 && <span className={`flame ${bump ? 'bump' : ''}`}> 🔥{streakNow}</span>}
         </button>
         <button className={isOn({ kind: 'feed', topic: null }) ? 'on' : ''} onClick={() => go({ kind: 'feed', topic: null })}>
           All
@@ -234,7 +253,14 @@ export default function App() {
         )}
       </nav>
 
-      <main className="feed" ref={feedRef}>
+      {view.kind === 'today' && (
+        <div className="progress" aria-label={`Card ${Math.min(active + 1, 5)} of 5`}>
+          {[0, 1, 2, 3, 4].map((n) => (
+            <span key={n} className={n <= active ? 'on' : ''} />
+          ))}
+        </div>
+      )}
+      <main className="feed" ref={feedRef} key={JSON.stringify(view)}>
         {items.length === 0 && (
           <section className="card empty">
             <div className="inner">
@@ -246,10 +272,13 @@ export default function App() {
         {items.map((it, i) => {
           if (it.kind === 'done')
             return (
-              <section key="done" className="card done" data-idx={i} data-kind="done">
+              <section key="done" className={`card done ${fx(i)}`} data-idx={i} data-kind="done">
                 <div className="inner">
                   <span className="tag">Done for today</span>
-                  <h2>{streakNow > 1 ? `🔥 ${streakNow} days in a row` : 'That’s your five'}</h2>
+                  <div className="burst" aria-hidden="true">
+                    🔥
+                  </div>
+                  <h2>{streakNow > 1 ? `${streakNow} days in a row` : 'That’s your five'}</h2>
                   <p className="body">Five new things you didn’t know this morning. Five more tomorrow.</p>
                   <p className="hook">Miss a day? One free pass a week keeps your streak alive.</p>
                   <button className="cta" onClick={() => go({ kind: 'feed', topic: null })}>
@@ -262,7 +291,7 @@ export default function App() {
             const { quiz } = it
             const picked = answers[i]
             return (
-              <section key={`q-${i}`} className={`card quiz t-${quiz.card.topic}`} data-idx={i} data-kind="quiz">
+              <section key={`q-${i}`} className={`card quiz t-${quiz.card.topic} ${fx(i)}`} data-idx={i} data-kind="quiz">
                 <div className="inner">
                   <span className="tag">Quick recall</span>
                   <h2>{quiz.card.title}</h2>
@@ -291,7 +320,7 @@ export default function App() {
           }
           const c = it.card
           return (
-            <section key={`${c.id}-${i}`} className={`card t-${c.topic}`} data-id={c.id} data-idx={i} data-kind="card">
+            <section key={`${c.id}-${i}`} className={`card t-${c.topic} ${fx(i)}`} data-id={c.id} data-idx={i} data-kind="card">
               <div className="inner">
                 <span className="tag">
                   {LABEL[c.topic]}

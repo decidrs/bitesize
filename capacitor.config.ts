@@ -4,15 +4,15 @@ const config: CapacitorConfig = {
   appId: 'com.strateriq.morsel',
   appName: 'Morsel',
   webDir: 'dist',
-  backgroundColor: '#0d0f14',
+  backgroundColor: '#111318',
   ios: {
     // The app scrolls inside its own feed; the page itself never rubber-bands.
     scrollEnabled: false,
     contentInset: 'never',
-    backgroundColor: '#0d0f14',
+    backgroundColor: '#111318',
   },
   plugins: {
-    SplashScreen: { launchShowDuration: 0, launchAutoHide: false, backgroundColor: '#0d0f14', showSpinner: false },
+    SplashScreen: { launchShowDuration: 0, launchAutoHide: false, backgroundColor: '#111318', showSpinner: false },
     StatusBar: { style: 'DARK', overlaysWebView: true },
   },
 };
