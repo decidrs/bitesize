@@ -25,3 +25,7 @@ npx cap open ios   # on a Mac with Xcode: set the signing team, then Product →
 ```
 
 Privacy policy for the App Store listing: `/privacy.html` on the site.
+
+## Asking Claude
+
+Open a GitHub issue with `@claude` and a plain request. Claude replies with a PR for the founder to merge.
