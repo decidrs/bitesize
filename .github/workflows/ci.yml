@@ -3,6 +3,8 @@ name: ci
 
 on:
   pull_request:
+  # claude-pr.yml dispatches this for PRs it opens (a PR opened with the Actions token fires no pull_request run).
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -33,7 +35,12 @@ jobs:
         with:
           fetch-depth: 0
       - name: PR diff
-        run: git diff --no-color "${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}" > "$RUNNER_TEMP/pr.diff"
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ -z "$BASE" ]; then BASE=$(git merge-base origin/main HEAD); HEAD=$(git rev-parse HEAD); fi
+          git diff --no-color "$BASE...$HEAD" > "$RUNNER_TEMP/pr.diff"
       - name: credential scan (added lines)
         run: python3 .github/ci/scan_diff.py .github/ci "$RUNNER_TEMP/pr.diff"
       - name: house rule 11 grep
