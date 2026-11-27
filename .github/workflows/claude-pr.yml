@@ -1,0 +1,39 @@
+name: claude-pr
+# The Claude app pushes its work to a claude/** branch and only posts a "Create PR" link.
+# This opens the PR for it. A PR opened with the Actions token fires no pull_request run,
+# so it then dispatches ci.yml where that workflow accepts workflow_dispatch.
+# Never merges. Needs repo setting: Actions > General > "Allow GitHub Actions to create and approve pull requests".
+
+on:
+  push:
+    branches: ['claude/**']
+
+permissions:
+  contents: read
+  pull-requests: write
+  actions: write
+
+jobs:
+  open-pr:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: open PR and run ci
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          OWNER: ${{ github.repository_owner }}
+          BRANCH: ${{ github.ref_name }}
+          BASE: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          pr=$(gh api "repos/$REPO/pulls?head=$OWNER:$BRANCH&state=open" --jq '.[0].number // empty')
+          if [ -n "$pr" ]; then echo "PR #$pr already open; its own pull_request run covers this push."; exit 0; fi
+          title=$(gh api "repos/$REPO/commits/$GITHUB_SHA" --jq '.commit.message | split("\n")[0]')
+          body="Opened automatically from Claude's branch \`$BRANCH\`."
+          issue=$(printf '%s' "$BRANCH" | sed -n 's#^claude/issue-\([0-9][0-9]*\)-.*#\1#p')
+          if [ -n "$issue" ]; then body=$(printf '%s\n\nCloses #%s' "$body" "$issue"); fi
+          pr=$(gh api "repos/$REPO/pulls" -f title="$title" -f head="$BRANCH" -f base="$BASE" -f body="$body" --jq .number)
+          echo "Opened PR #$pr"
+          gh workflow run ci.yml --repo "$REPO" --ref "$BRANCH" \
+            || echo "::notice::ci.yml missing or has no workflow_dispatch trigger: CI did not run for PR #$pr."
