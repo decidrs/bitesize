@@ -4,7 +4,7 @@ import { buildOrder, nextCycle } from './feed'
 import { completeDay, currentStreak, dayKey, pickToday, type Streak } from './daily'
 import { makeQuiz, type Quiz } from './quiz'
 import { cardImage, SITE } from './shareImage'
-import { loadSaved, loadSeen, loadStreak, saveSaved, saveSeen, saveStreak } from './storage'
+import { clearAll, loadSaved, loadSeen, loadStreak, saveSaved, saveSeen, saveStreak } from './storage'
 import { TOPICS, type Card, type Topic } from './types'
 import { appReady, dailyReminderOn, haptic, isNative, nativeShare, nativeShareImage, setDailyReminder } from './native'
 
@@ -53,6 +53,7 @@ export default function App() {
   const [items, setItems] = useState<Item[]>([])
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [reminder, setReminder] = useState(false)
+  const [confirmClear, setConfirmClear] = useState(false)
   const feedRef = useRef<HTMLDivElement>(null)
   const chipsRef = useRef<HTMLElement>(null)
   const cardCount = useRef(0)
@@ -280,7 +281,7 @@ export default function App() {
                   </div>
                   <h2>{streakNow > 1 ? `${streakNow} days in a row` : 'That’s your five'}</h2>
                   <p className="body">Five new things you didn’t know this morning. Five more tomorrow.</p>
-                  <p className="hook">Miss a day? One free pass a week keeps your streak alive.</p>
+                  <p className="hook">Come back whenever suits you. Missing a day is fine.</p>
                   <button className="cta" onClick={() => go({ kind: 'feed', topic: null })}>
                     Keep exploring
                   </button>
@@ -365,7 +366,24 @@ export default function App() {
         ·{' '}
         <a href={`${SITE}/privacy.html`} target="_blank" rel="noopener">
           Privacy
-        </a>
+        </a>{' '}
+        ·{' '}
+        <button
+          type="button"
+          className="linkish"
+          onClick={async () => {
+            if (!confirmClear) {
+              setConfirmClear(true)
+              window.setTimeout(() => setConfirmClear(false), 4000)
+              return
+            }
+            await setDailyReminder(false, cardFor).catch(() => false)
+            clearAll()
+            window.location.reload()
+          }}
+        >
+          {confirmClear ? 'Tap again to clear everything' : 'Clear my data'}
+        </button>
       </footer>
       <div className={`toast ${toast ? 'show' : ''}`} role="status" aria-live="polite">
         {toast}
