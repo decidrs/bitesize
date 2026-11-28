@@ -36,3 +36,14 @@ export function saveStreak(s: Streak) {
     /* ignore */
   }
 }
+
+/** "Clear my data": removes everything Morsel keeps on this device. */
+export function clearAll() {
+  try {
+    Object.keys(localStorage)
+      .filter((k) => k.startsWith('bitesize.'))
+      .forEach((k) => localStorage.removeItem(k))
+  } catch {
+    /* storage blocked: nothing to clear */
+  }
+}
